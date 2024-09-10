@@ -1,0 +1,2777 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="John Powers" />
+
+<meta name="date" content="2024-09-10" />
+
+<title>Natural selection on floral volatiles and other traits can change with snowmelt timing and summer precipitation</title>
+
+<script src="libs/header-attrs-2.26/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="libs/navigation-1.1/tabsets.js"></script>
+<script src="libs/navigation-1.1/codefolding.js"></script>
+<link href="libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore">Natural selection on floral volatiles and
+other traits can change with snowmelt timing and summer
+precipitation</h1>
+<h4 class="author"><a href="http://sites.uci.edu/powers/">John
+Powers</a></h4>
+<h4 class="date">2024-09-10</h4>
+
+</div>
+
+
+<style type="text/css">
+.main-container { max-width: 1000px; margin-left: 0; margin-right: auto; }
+img{ max-width:200%; height: auto; }
+td, th { padding : 6px }
+</style>
+<pre class="r"><code>library(tidyverse)
+library(vegan)
+library(broom)
+library(broom.mixed)
+library(emmeans)
+library(viridis)
+library(ggvegan)
+library(ggpubr)
+library(gridExtra)
+library(dendsort)
+library(pheatmap)
+library(RColorBrewer)
+library(lme4)
+library(lmerTest)
+library(glmnet)
+library(bouquet)
+library(knitr)
+knitr::opts_chunk$set(comment=&quot;&quot;, cache=T, warning = F, message = F, 
+                      fig.path = &quot;images/&quot;, dev=&quot;svglite&quot;, dev.args=list(fix_text_size=FALSE), fig.height=8, fig.width=8)
+options(digits=4) # for kables</code></pre>
+<pre class="r"><code>figs &lt;- read_tsv(&quot;data/volatiles/volatiles_fig_paths.tsv&quot;)
+walk2(figs$path, figs$fig, ~system(paste0(&quot;cp images/&quot;, .x, &quot;.svg ./figures/svg/Figure&quot;, .y, &quot;.svg&quot;)))
+walk2(figs$path, figs$fig, ~system(paste0(&quot;inkscape -o ./figures/eps/Figure&quot;, .y, &quot;.eps images/&quot;, .x, &quot;.svg&quot;)))</code></pre>
+<pre class="r"><code>load(&quot;data/maxfield_data.rda&quot;) #load trait measurements, etc
+load(&quot;data/volatiles/maxfield_volatiles_lessdupes.rda&quot;) # from maxfield_gc.R, loads maxfmeta and maxf (wide GC data)
+
+fitnesstraits &lt;- c(&quot;seeds_est&quot;, &quot;seeds_initiated_per_flower&quot;, &quot;prop_uninfested&quot;, &quot;eggs_per_flower&quot;)
+fitnessnames &lt;- c(traitnames, prop_uninfested = &quot;Prop. uneaten fruits&quot;,
+                  eggs_per_flower=&quot;Fly eggs per flower&quot;)[fitnesstraits]
+
+volsmeta &lt;- maxfmeta %&gt;% mutate(sampledate = as.Date(sampledate), year = factor(year(sampledate))) %&gt;% 
+  drop_na(plotid) %&gt;% #cut out ambients, leaving 459 chromatograms
+  filter(year %in% c(&quot;2018&quot;,&quot;2019&quot;,&quot;2020&quot;)) %&gt;% droplevels() %&gt;% 
+  mutate(plot=str_sub(plotid, 1,1), subplot=str_sub(plotid, 2,2),
+         sequence.date = date(sequence.start),
+         sequence.year = year(sequence.date)) %&gt;% 
+  rename(sampledate.file=sampledate, plot.file = plot, subplot.file=subplot, plant.file=plant) %&gt;% 
+  left_join(vt %&gt;% select(-c(colnames(treatments),&quot;type&quot;,&quot;plantid&quot;)) %&gt;% 
+              filter(!exclude %in% c(&quot;flowers&quot;, &quot;incomplete&quot;, &quot;resample&quot;))) %&gt;% 
+  left_join(treatments) %&gt;% #assume that the written metadata is correct not the info in the  .file name
+  mutate(total_time = end - bag,
+         total_time = replace_na(total_time, median(total_time, na.rm=T)),# fill in 45 minutes when missing metadata
+         pump_id=as.character(pump_id))
+rownames(volsmeta) &lt;- volsmeta$index </code></pre>
+<div id="soil-moisture" class="section level1">
+<h1>Soil moisture</h1>
+<pre class="r"><code>ggplot(vt %&gt;% drop_na(water) %&gt;% mutate(date=sampledate), aes(x=yday(date))) + 
+  facet_wrap(vars(year), ncol = 1) +
+  scale_x_continuous(limits=c(160, 230)) +
+  geom_col(data=daily_precip_est, aes(y=EPA_NOAA_filled), fill=brewer.pal(7, &quot;Set3&quot;)[7]) +
+  geom_point(aes(y=VWC, color=water), size=0.5) + 
+  geom_line(aes(y=VWC, color=water),
+            data=vt %&gt;% drop_na(water, VWC) %&gt;% group_by(year, water, date=sampledate) %&gt;% summarize(VWC=mean(VWC)), size=1) + 
+  geom_line(aes(y=VWC, color=water),
+            data=sm %&gt;% group_by(year, water, date) %&gt;% summarize(VWC=mean(VWC)), size=0.5, alpha=0.5) + 
+  scale_color_manual(values=water_pal) + 
+  labs(x=&quot;Day of year&quot;, y=&quot;Soil moisture (%VWC) | Daily precipitation (mm)&quot;, color=&quot;Precipitation&quot;) + theme_bw()</code></pre>
+<p><img src="images/sm-1.svg" width="480" /></p>
+</div>
+<div id="process-gcms-data" class="section level1">
+<h1>Process GCMS data</h1>
+<div id="filtering-with-bouquet" class="section level2">
+<h2>Filtering with bouquet</h2>
+<pre class="r"><code># load short names and standard regessions
+ipochems &lt;- read_csv(&quot;data/volatiles/Ipo volatile compounds - chemsf_ipo.csv&quot;) %&gt;% 
+  select(name, shortname, standard, verdict) %&gt;%  filter(verdict != &quot;&quot;) %&gt;% 
+  mutate(standard = fct_recode(standard, &quot;Methyl_salicylate&quot;=&quot;Benzaldehyde&quot;), # benzaldehyde regressions not reliable
+         class = fct_recode(standard, Aliphatics=&quot;Hexenol&quot;, Benzenoids=&quot;Methyl_salicylate&quot;, Benzenoids=&quot;Indole&quot;, 
+                            Sesquiterpenes=&quot;Caryophyllene&quot;, Monoterpenes=&quot;alpha_Pinene&quot;, Monoterpenes=&quot;Linalool&quot;)) %&gt;%  
+  left_join(read_csv(&quot;data/volatiles/regressions_181921_filtered_slopes.csv&quot;) %&gt;% 
+              pivot_wider(id_cols=standard, names_from=&quot;year&quot;, names_prefix=&quot;area_per_ng&quot;, values_from=area_per_ng)) 
+class_pal &lt;- set_names(c(&quot;#BC0060&quot;,&quot;#027B8C&quot;,&quot;#E56E00&quot;,&quot;#86D400&quot;), levels(ipochems$class))
+
+#shorten chemical names and merge compounds with multiple names
+shortnames &lt;- ipochems %&gt;% select(name, shortname) %&gt;% filter(shortname!=&quot;&quot;) %&gt;% deframe()
+
+greekify &lt;- function(names) {
+  names %&gt;% 
+    str_replace(&quot;^a-&quot;,&quot;\U03B1-&quot;) %&gt;% str_replace(&quot;-a-&quot;,&quot;-\U03B1-&quot;) %&gt;% 
+    str_replace(&quot;^b-&quot;,&quot;\U03B2-&quot;) %&gt;% str_replace(&quot;-b-&quot;,&quot;-\U03B2-&quot;) %&gt;% 
+    str_replace(&quot;^g-&quot;,&quot;\U03B3-&quot;) %&gt;% str_replace(&quot;-g-&quot;,&quot;-\U03B3-&quot;)
+}
+
+metadata &lt;- maxfmeta %&gt;% 
+  mutate(sampledate = as.Date(sampledate), year = year(sampledate)) %&gt;% 
+  filter(year != 2021) %&gt;% mutate(year=factor(year)) %&gt;% #drop samples collected in 2021
+  as.data.frame() %&gt;% #tibbles break bouquet&#39;s add_count_freqs
+  select(-sample) %&gt;% #name conflict with bouquet
+  load_metadata(date=&quot;Date&quot;, sample=&quot;FileName&quot;, type=&quot;type&quot;)#group=&quot;year&quot;
+
+load(&quot;data/volatiles/maxfield210827.Rdata&quot;) #load long maxf.data
+longdata &lt;- maxf.data %&gt;% 
+  filter(batch != &quot;heather_maxfield190813_new.txt&quot;, #duplicates - subset of heather_maxfield190813_new001.txt
+         Filename %in% metadata$sample, #match list in metadata
+         Name != &quot;&quot;) %&gt;% #drop unidentified peaks
+  mutate(Name = droplevels(recode(Name, !!!shortnames))) %&gt;% 
+  load_longdata(sample=&quot;Filename&quot;, RT=&quot;Ret.Time&quot;, name=&quot;Name&quot;, area=&quot;Area&quot;, match = &quot;SI&quot;, maxmatch=100)
+remove(maxf.data)
+
+vol.all &lt;- make_sampletable(longdata, metadata)
+chems &lt;- make_chemtable(longdata, metadata)</code></pre>
+<pre class="r"><code>chemsf &lt;- chems %&gt;%
+  filter_RT(2, 17) %&gt;% 
+  filter_match(0.8) %&gt;% 
+  filter_freq(0.1) %&gt;% 
+  filter_contaminant(cont.list = c(&quot;Butanenitrile, 2-methyl-&quot;,&quot;2-Oxepanone, 7-methyl-&quot;, #RT order
+                                   &quot;Ethylbenzene&quot;, &quot;Hexyl chloroformate&quot;, &quot;L-Lactic acid&quot;,
+                                   &quot;1,5-Dimethyl-6-oxa-bicyclo[3.1.0]hexane&quot;,&quot;Cyclopentanone, 2-ethyl-&quot;,
+                                   &quot;trisiloxane, 1,1,1,5,5,5-hexamethyl-3-[(trimethylsilyl)oxy]-&quot;,
+                                   &quot;Cyclobutane, 1,2-bis(1-methylethenyl)-, trans-&quot;,
+                                   &quot;N-.alpha.,N-.omega.-Di-cbz-L-arginine&quot;, &quot;3-Ethyl-3-methylheptane&quot;,
+                                   &quot;Trichloroacetic acid, 6-ethyl-3-octyl ester&quot;, &quot;11-Methyldodecanol&quot;,
+                                   &quot;8-Hexadecenal, 14-methyl-, (Z)-&quot;,
+                                   &quot;Tritetracontane&quot;,&quot;Carbonic acid, decyl undecyl ester&quot;,
+                                   &quot;Eicosane, 2,4-dimethyl-&quot;, &quot;1-Decanol, 2-octyl-&quot;,
+                                   &quot;linalyl acetate&quot;, #kovats doesn&#39;t match
+                                   &quot;[(Z)-hex-3-enyl] 2-methylpropanoate&quot;,  #merge into [(E/Z)-hex-3-enyl] butanoate
+                                   &quot;[(E)-hex-4-enyl] butanoate&quot;, #merge into [(E/Z)-hex-3-enyl] butanoate
+                                   &quot;[(Z)-hex-3-enyl] 2-methylbutanoate&quot;, #passed filters, only in 50 samples after quant
+                                   &quot;2-butyloctan-1-ol&quot;,#absent in 2019
+                                   &quot;(2E)-2,7-dimethylocta-2,6-dien-1-ol&quot; #a quant integration that coelutes with b-myrcene
+                                   )) %&gt;%
+  filter_area(min_maximum = 1e5) %&gt;% #not used for final filtering
+  filter_ambient_ratio(vol.all, metadata, ratio = 4) %&gt;%
+  combine_filters() 
+
+# removed (2E)-2,7-dimethylocta-2,6-dien-1-ol - quant integration that coelutes with b-myrcene
+add_quant2 &lt;- c(&quot;(4E,6Z)-alloocimene&quot;, &quot;methyl benzoate&quot;, &quot;2-methylbenzonitrile&quot;, &quot;(Z)-b-ocimene&quot;, &quot;(Z)-a-bergamotene&quot;, &quot;g-terpinene&quot;, &quot;(E)-b-bergamotene&quot;, &quot;a-humulene&quot;, &quot;pseudoionone&quot;)
+
+chemsf$filter_final &lt;- with(chemsf, filter_RT==&quot;OK&quot; &amp; filter_match==&quot;OK&quot; &amp; 
+                              filter_freq.floral==&quot;OK&quot; &amp; filter_contaminant==&quot;OK&quot; |
+                             name %in% c(&quot;[(E)-hex-3-enyl] butanoate&quot;, add_quant2)) #include as counterpart to Z isomer
+
+#now run t-tests after rarity filtering
+#don&#39;t filter by ambient ratio first, see paper on problems: https://doi.org/10.1186/1471-2105-11-450
+chemsf &lt;- bind_rows(chemsf %&gt;% filter(filter_final) %&gt;% 
+  filter_ambient_ttest(prune_sampletable(vol.all, chemsf, metadata), 
+                       metadata, alpha = 0.05, adjust = &quot;fdr&quot;), #not used for final filtering
+  chemsf %&gt;% filter(!filter_final)) %&gt;% 
+  mutate(filter_ambient_ttest=fct_na_value_to_level(filter_ambient_ttest, &quot;notchecked&quot;),
+         filter_final = filter_final &amp; filter_ambient_ratio ==&quot;OK&quot;) %&gt;% 
+  arrange(match(name, colnames(vol.all)))</code></pre>
+<pre class="r"><code>#vols &lt;- maxf[volsmeta$index,]
+vols &lt;- vol.all[volsmeta$FileName,]
+vols.cut &lt;- vols[,colSums(vols)&gt;3e8]
+rownames(vols.cut) &lt;- volsmeta$index
+vol &lt;- vols[volsmeta$FileName, chemsf$name[chemsf$filter_final]]#don&#39;t cut ambients yet
+rownames(vol) &lt;- volsmeta$index
+
+# Shimadzu Quantitative Table ---------------------------------------------
+# source(&quot;read_shimadzu.R&quot;)
+# quantpath &lt;- &quot;~/MyDocs/MEGA/UCI/Schiedea/Analysis/scent/rmbl/RMBL Batches/quant_round4/&quot;
+# bfiles &lt;-  list.files(quantpath)
+# quant.full &lt;- map_dfr(set_names(paste0(quantpath, bfiles), bfiles), read.shimadzu.quant, .id=&quot;batch&quot;) %&gt;%
+#   mutate(Name = trimws(Name), Area=replace_na(Area, 0)) %&gt;%
+#   distinct(Filename, Name, .keep_all=T)
+# 
+# quant.full %&gt;% drop_na(Ret.Time) %&gt;% mutate(Name = fct_reorder(Name, Ret.Time)) %&gt;%
+#   ggplot(aes(x=Ret.Time, y=Name, color=batch)) + geom_jitter(width=0, size=0.2)
+# quant.full %&gt;% drop_na(Ret.Time) %&gt;% group_by(Name) %&gt;% mutate(RT.median = median(Ret.Time)) %&gt;%
+#   ggplot(aes(x=Ret.Time-RT.median, y=Name, color=batch)) + geom_jitter(width=0, size=0.5)
+# 
+# quant &lt;- quant.full %&gt;% select(batch, Dirname, Filename, Name, Area) %&gt;%
+#   mutate(Dirname = fct_relabel(Dirname, str_remove, &quot;C:/GCMSsolution/Data/Project1_190815/&quot;)) %&gt;%
+#   filter(!Name %in% c(&quot;1,6,10-Dodecatrien-3-ol, 3,7,11-trimethyl-&quot;,
+#          &quot;4,7-Methano-1H-indene, 2,4,5,6,7,7a-hexahydro-&quot;,
+#          &quot;Tricyclo[3.1.0.0(2,4)]hexane, 3,6-diethyl-3,6-dimethyl-, trans-&quot;)) %&gt;%
+#   mutate(Name = recode(Name, !!!shortnames)) %&gt;%
+#   pivot_wider(names_from = &quot;Name&quot;, values_from=&quot;Area&quot;) %&gt;% as.data.frame()
+# 
+# rownames(quant) &lt;- quant$Filename
+# quant[,c(&quot;batch&quot;,&quot;Dirname&quot;,&quot;Filename&quot;)] &lt;- NULL
+# quant.all &lt;- quant[rownames(vols),]
+# write_tsv(quant.all %&gt;% rownames_to_column(&quot;Filename&quot;), &quot;data/volatiles/quant_all.tsv&quot;)
+quant.all &lt;- read_tsv(&quot;data/volatiles/quant_all.tsv&quot;) %&gt;% column_to_rownames(&quot;Filename&quot;)
+
+quant.slopes &lt;- set_names(rep(0,ncol(quant.all)), colnames(quant.all))
+for(compvol in colnames(quant.all)) {
+  nozeros &lt;- bind_cols(select(vols,qual=compvol), select(quant.all,quant=compvol)) %&gt;% 
+    filter(!(qual==0 | quant == 0))
+  quant.slopes[compvol] = coef(lm(quant ~ 0 + qual, data=nozeros))[&quot;qual&quot;]
+}
+write_tsv(enframe(quant.slopes) %&gt;% left_join(enframe(shortnames, name=&quot;Name&quot;, value=&quot;name&quot;)),
+          &quot;data/volatiles/quant_slopes.tsv&quot;)
+
+quant.scaled &lt;- sweep(quant.all, 2, quant.slopes, FUN = &#39;/&#39;)
+
+quant.scaled.vol &lt;- quant.scaled[volsmeta$FileName, 
+                                 colnames(quant.scaled) %in% 
+                                   intersect(colnames(quant.all), colnames(vol))] 
+
+#swap in scaled quant integrations
+vol[,colnames(quant.scaled.vol)] &lt;- quant.scaled.vol</code></pre>
+<pre class="r"><code>ipogood &lt;- colnames(vol)
+vols.good &lt;- vol %&gt;% 
+  sweep(1, as.numeric(volsmeta$total_time, units=&quot;hours&quot;),  FUN = &#39;/&#39;) #divide by equilibration + pumping time
+ipochemsf &lt;- ipochems[match(colnames(vols.good), ipochems$shortname),]
+for(yr in unique(volsmeta$sequence.year)) {
+  thisyr &lt;- volsmeta$sequence.year==yr
+  vols.good[thisyr,] &lt;- sweep(vols.good[thisyr,], 2, pull(ipochemsf, paste0(&quot;area_per_ng&quot;,&quot;2019&quot;)), FUN = &#39;/&#39;)# convert areas to nanograms 
+}
+
+ipochemsf &lt;- ipochemsf %&gt;% 
+  left_join(tibble(shortname = colnames(vols.good), # the following values are new, computed on the filtered dataset
+                            freq.floral = map_dbl(as.data.frame(vols.good&gt;0), mean),
+                            mean.floral = map_dbl(vols.good, mean),
+                            max.floral =  map_dbl(vols.good, max))) %&gt;% 
+  select(-name) %&gt;% rename(name=shortname) %&gt;%
+  mutate(class=droplevels(class))#no Benzenoids
+rownames(ipochemsf) &lt;- ipochemsf$name
+
+k &lt;- 2 #split into this many k-means cluster per year
+volsmeta$cluster &lt;- 0
+for(yr in unique(year(volsmeta$sequence.start))) {
+  thisyr &lt;- volsmeta$sequence.year==yr
+  chems.include &lt;- setdiff(colnames(vols.cut), ipogood) #drop alpha-pinene so this is all nonfloral
+  set.seed(1)
+  volsmeta$cluster[thisyr] &lt;- kmeans(decostand(vols.cut[thisyr,chems.include], method=&quot;log&quot;), k, nstart=3)$cluster
+}
+
+volsmeta &lt;- volsmeta %&gt;% 
+  mutate(year.cluster = paste0(year, if_else(sequence.year == 2018, &quot;&quot;, paste0(&quot;.&quot;,cluster))),
+         total = rowSums(vols.good),
+         sampledate = coalesce(sampledate, sampledate.file))#get sampling date from filename when no metadata
+
+#Cuts 2 samples with extemely low emissions that fly off of nmds blob
+keep.samples &lt;- rowSums(vols.good)&gt;3
+volsmeta &lt;- volsmeta[keep.samples,]
+vols &lt;- vols[keep.samples,]
+vols.cut &lt;- vols.cut[keep.samples,]
+vols.good &lt;- vols.good[keep.samples,]</code></pre>
+</div>
+<div id="average-by-plant" class="section level2">
+<h2>Average by plant</h2>
+<pre class="r"><code>volsmeta %&gt;% count(year, plantid, name=&quot;n_samples&quot;) %&gt;% count(n_samples) %&gt;% kable(caption=&quot;number of samples per plant&quot;)</code></pre>
+<table>
+<caption>number of samples per plant</caption>
+<thead>
+<tr class="header">
+<th align="right">n_samples</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">313</td>
+</tr>
+<tr class="even">
+<td align="right">2</td>
+<td align="right">44</td>
+</tr>
+<tr class="odd">
+<td align="right">3</td>
+<td align="right">14</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+<tr class="odd">
+<td align="right">5</td>
+<td align="right">1</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>volsmeta.avg &lt;- volsmeta %&gt;% 
+  group_by(across(all_of(c(&quot;type&quot;, &quot;plantid&quot;, colnames(treatments))))) %&gt;% 
+  summarize(across(all_of(c(&quot;VWC&quot;, &quot;total&quot;)), ~mean(.x, na.rm=T)), 
+            index=index[1], .groups=&quot;drop&quot;)
+
+vols.good.avg &lt;- vols.good %&gt;% bind_cols(volsmeta) %&gt;% 
+  group_by(across(all_of(c(&quot;plantid&quot;, colnames(treatments))))) %&gt;% 
+  summarize(across(all_of(colnames(vols.good)), ~mean(.x, na.rm=T)), .groups=&quot;drop&quot;) %&gt;% 
+  select(-any_of(colnames(volsmeta)))
+rownames(volsmeta.avg) &lt;- rownames(vols.good.avg) &lt;- volsmeta.avg$index</code></pre>
+<pre class="r"><code>minsamples &lt;- nrow(vols.good) * 0.75 #top 12 most common volatiles, in 75% of samples
+ipogood.top &lt;- vols.good[colSums(decostand(vols.good,&quot;pa&quot;)) &gt; minsamples] %&gt;% 
+  colSums() %&gt;% sort(decreasing=T) %&gt;% names()
+vols.good.top &lt;- vols.good.avg[,ipogood.top]
+
+volsmeta.good.top &lt;- bind_cols(volsmeta.avg, vols.good.top) %&gt;%  
+  pivot_longer(-all_of(colnames(volsmeta.avg))) %&gt;% 
+  mutate(name = fct_relevel(name, ipogood.top))
+
+mnps.plantyr.traits &lt;- mnps.plantyr %&gt;% 
+  select(year, plotid, plantid, all_of(traits), eggs_per_flower) %&gt;%
+  mutate(prop_uninfested = 1 - prop_infested) %&gt;% 
+  mutate(plantid = str_remove(plantid, &quot;_[12][890]&quot;)) %&gt;% #disambiguations on the plantid already handled by year column, except...
+  group_by(year, plotid, plantid) %&gt;% #...two plants need to be combined in 2019
+  summarize(across(everything(), ~.x[!is.na(.x)][1]), .groups = &quot;drop&quot;)
+
+traits.good.top &lt;- volsmeta.good.top %&gt;% 
+  left_join(mnps.plantyr.traits) %&gt;% 
+  mutate(name = fct_relevel(name, ipogood.top))
+
+vols.class &lt;- vols.good.avg %&gt;% t() %&gt;% as.data.frame() %&gt;% rownames_to_column(&quot;name&quot;) %&gt;% 
+  left_join(select(ipochemsf, name=name, class)) %&gt;% 
+  group_by(class) %&gt;% summarize(across(-name, sum)) %&gt;% column_to_rownames(&quot;class&quot;) %&gt;%  t() %&gt;% as.data.frame()
+volsmeta.class &lt;- bind_cols(volsmeta.avg, vols.class) %&gt;%  
+  pivot_longer(-all_of(colnames(volsmeta.avg)))
+traits.class    &lt;- volsmeta.class %&gt;% left_join(mnps.plantyr.traits)
+volsmeta.traits &lt;- volsmeta.avg %&gt;%       left_join(mnps.plantyr.traits) #wide format
+vols.traits &lt;- bind_cols(volsmeta.avg, vols.good.avg) %&gt;% left_join(mnps.plantyr.traits)</code></pre>
+</div>
+<div id="compound-amounts" class="section level2">
+<h2>Compound amounts</h2>
+<pre class="r"><code>quant.RT &lt;- read_tsv(&quot;data/volatiles/quant_RT.tsv&quot;)
+load(&quot;data/volatiles/get_kovats.rda&quot;) # from RMBL-GCMS
+quant.RI.2018 &lt;- quant.RT %&gt;% filter(year==2018) %&gt;% mutate(RI = get_kovats(RT.median, &quot;2018-09-03&quot;)) %&gt;% 
+  mutate(name = shortnames[Name])
+
+vols.good.avg %&gt;% #average by plant first
+  pivot_longer(everything()) %&gt;% group_by(name) %&gt;% summarize(mean_emissions = mean(value), sd_emissions=sd(value)) %&gt;% 
+  left_join(ipochemsf) %&gt;%  arrange(class, desc(mean_emissions)) %&gt;% 
+  left_join(quant.RI.2018) %&gt;% 
+  mutate(meansd = paste(sprintf(mean_emissions, fmt = &#39;%#.1f&#39;), &quot;\U00B1&quot;, sprintf(sd_emissions, fmt = &#39;%#.1f&#39;)),
+         name=greekify(name), RI= round(RI)) %&gt;% 
+  select(class, RI, name, meansd) %&gt;%  kable(caption = &quot;Mean emission rates of each volatile&quot;)</code></pre>
+<table>
+<caption>Mean emission rates of each volatile</caption>
+<thead>
+<tr class="header">
+<th align="left">class</th>
+<th align="right">RI</th>
+<th align="left">name</th>
+<th align="left">meansd</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">933</td>
+<td align="left">α-pinene</td>
+<td align="left">42.2 ± 71.3</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">1029</td>
+<td align="left">limonene</td>
+<td align="left">16.7 ± 21.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">1035</td>
+<td align="left">(Z)-β-ocimene</td>
+<td align="left">15.6 ± 23.8</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">1010</td>
+<td align="left">3-carene</td>
+<td align="left">10.1 ± 13.5</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">1047</td>
+<td align="left">(E)-β-ocimene</td>
+<td align="left">6.3 ± 12.1</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">973</td>
+<td align="left">sabinene</td>
+<td align="left">5.9 ± 7.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">988</td>
+<td align="left">β-myrcene</td>
+<td align="left">4.8 ± 10.2</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">1217</td>
+<td align="left">verbenone</td>
+<td align="left">3.2 ± 5.8</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">1195</td>
+<td align="left">α-terpineol</td>
+<td align="left">3.0 ± 4.6</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">1056</td>
+<td align="left">γ-terpinene</td>
+<td align="left">0.9 ± 1.5</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">1115</td>
+<td align="left">(3E)-4,8-dimethylnona-1,3,7-triene</td>
+<td align="left">0.6 ± 1.3</td>
+</tr>
+<tr class="even">
+<td align="left">Monoterpenes</td>
+<td align="right">1128</td>
+<td align="left">(4E,6Z)-alloocimene</td>
+<td align="left">0.2 ± 0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">Benzenoids</td>
+<td align="right">1096</td>
+<td align="left">methyl benzoate</td>
+<td align="left">0.6 ± 0.6</td>
+</tr>
+<tr class="even">
+<td align="left">Benzenoids</td>
+<td align="right">1141</td>
+<td align="left">2-methylbenzonitrile</td>
+<td align="left">0.3 ± 0.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1435</td>
+<td align="left">β-caryophyllene</td>
+<td align="left">4.1 ± 10.3</td>
+</tr>
+<tr class="even">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1411</td>
+<td align="left">petasitene</td>
+<td align="left">1.8 ± 4.7</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1605</td>
+<td align="left">β-caryophyllene oxide</td>
+<td align="left">1.0 ± 3.7</td>
+</tr>
+<tr class="even">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1454</td>
+<td align="left">(E)-β-bergamotene</td>
+<td align="left">1.0 ± 2.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1424</td>
+<td align="left">(Z)-α-bergamotene</td>
+<td align="left">0.7 ± 0.9</td>
+</tr>
+<tr class="even">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1470</td>
+<td align="left">α-humulene</td>
+<td align="left">0.6 ± 1.7</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1387</td>
+<td align="left">α-copaene</td>
+<td align="left">0.5 ± 1.3</td>
+</tr>
+<tr class="even">
+<td align="left">Sesquiterpenes</td>
+<td align="right">1580</td>
+<td align="left">pseudoionone</td>
+<td align="left">0.5 ± 0.9</td>
+</tr>
+<tr class="odd">
+<td align="left">Aliphatics</td>
+<td align="right">851</td>
+<td align="left">(Z)-hex-3-en-1-ol</td>
+<td align="left">7.0 ± 12.2</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">865</td>
+<td align="left">hexan-1-ol</td>
+<td align="left">4.9 ± 5.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Aliphatics</td>
+<td align="right">1141</td>
+<td align="left">[(E)-hex-3-enyl] butanoate</td>
+<td align="left">3.4 ± 7.5</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">1184</td>
+<td align="left">[(Z)-hex-3-enyl] butanoate</td>
+<td align="left">3.2 ± 8.0</td>
+</tr>
+<tr class="odd">
+<td align="left">Aliphatics</td>
+<td align="right">1003</td>
+<td align="left">[(E)-hex-3-enyl] acetate</td>
+<td align="left">1.8 ± 3.6</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">956</td>
+<td align="left">(E)-4-oxohex-2-enal</td>
+<td align="left">1.2 ± 2.3</td>
+</tr>
+<tr class="odd">
+<td align="left">Aliphatics</td>
+<td align="right">724</td>
+<td align="left">3-methylbutan-1-ol</td>
+<td align="left">1.0 ± 1.8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="sample-size" class="section level2">
+<h2>Sample size</h2>
+<pre class="r"><code>volsmeta %&gt;% count(year, name=&quot;samples&quot;) %&gt;% 
+  left_join(volsmeta %&gt;% count(year, plantid) %&gt;% count(year, name=&quot;plants&quot;)) %&gt;% 
+  kable(caption = &quot;Samples and plants by year&quot;)</code></pre>
+<table>
+<caption>Samples and plants by year</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">samples</th>
+<th align="right">plants</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="right">166</td>
+<td align="right">112</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="right">144</td>
+<td align="right">131</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="right">146</td>
+<td align="right">131</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>volsmeta %&gt;% count(year, sampledate) %&gt;% count(year) %&gt;% 
+  kable(caption=&quot;Number of sampling dates&quot;)</code></pre>
+<table>
+<caption>Number of sampling dates</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="right">15</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="right">8</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="right">6</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="distribution-among-treatments" class="section level2">
+<h2>Distribution among treatments</h2>
+<pre class="r"><code>ggplot(volsmeta, aes(x=yday(sampledate), fill=paste(water, snow))) + geom_bar() + facet_wrap(vars(year), ncol=1) + 
+  labs(fill=&quot;Precipitation, snowmelt&quot;, x=&quot;Day of year&quot;, y=&quot;Samples&quot;) + scale_fill_manual(values=water_snow_pal)+ theme_minimal() </code></pre>
+<p><img src="images/random_sampling-1.svg" width="480" /></p>
+<pre class="r"><code>vt %&gt;% group_by(water, snow) %&gt;% summarize(bag=mean(bag, na.rm=T)) %&gt;% kable(caption = &quot;Mean bagging time&quot;)</code></pre>
+<table>
+<caption>Mean bagging time</caption>
+<thead>
+<tr class="header">
+<th align="left">water</th>
+<th align="left">snow</th>
+<th align="left">bag</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Addition</td>
+<td align="left">Early</td>
+<td align="left">1899-12-30 10:30:52</td>
+</tr>
+<tr class="even">
+<td align="left">Addition</td>
+<td align="left">Normal</td>
+<td align="left">1899-12-30 10:36:03</td>
+</tr>
+<tr class="odd">
+<td align="left">Control</td>
+<td align="left">Early</td>
+<td align="left">1899-12-30 10:45:08</td>
+</tr>
+<tr class="even">
+<td align="left">Control</td>
+<td align="left">Normal</td>
+<td align="left">1899-12-30 10:37:02</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduction</td>
+<td align="left">Early</td>
+<td align="left">1899-12-30 10:40:25</td>
+</tr>
+<tr class="even">
+<td align="left">Reduction</td>
+<td align="left">Normal</td>
+<td align="left">1899-12-30 10:34:01</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="buds" class="section level2">
+<h2>Buds</h2>
+<pre class="r"><code>cat(paste(&quot;Buds included in&quot;, round(sum(volsmeta$buds&gt;0, na.rm=T)/sum(volsmeta$buds&gt;=0, na.rm=T)*100), &quot;% of samples&quot;))</code></pre>
+<pre><code>Buds included in 17 % of samples</code></pre>
+</div>
+</div>
+<div id="plasticity" class="section level1">
+<h1>Plasticity</h1>
+<div id="plasticity-to-treatments" class="section level2">
+<h2>Plasticity to treatments</h2>
+<div id="cap" class="section level3">
+<h3>CAP</h3>
+<pre class="r"><code>(scents.cap &lt;- capscale(sqrt(vols.good.avg) ~ year * water * snow, data=volsmeta.avg, distance=&quot;bray&quot;))</code></pre>
+<pre><code>Call: capscale(formula = sqrt(vols.good.avg) ~ year * water * snow,
+data = volsmeta.avg, distance = &quot;bray&quot;)
+
+              Inertia Proportion Rank
+Total          43.581      1.000     
+Constrained     5.821      0.134   17
+Unconstrained  52.114      1.196  117
+Imaginary     -14.354     -0.329  256
+Inertia is squared Bray distance 
+Species scores projected from &#39;sqrt&#39; &#39;vols.good.avg&#39; 
+
+Eigenvalues for constrained axes:
+ CAP1  CAP2  CAP3  CAP4  CAP5  CAP6  CAP7  CAP8  CAP9 CAP10 CAP11 CAP12 CAP13 
+2.892 0.987 0.698 0.289 0.156 0.141 0.133 0.100 0.086 0.070 0.057 0.050 0.041 
+CAP14 CAP15 CAP16 CAP17 
+0.037 0.034 0.027 0.022 
+
+Eigenvalues for unconstrained axes:
+ MDS1  MDS2  MDS3  MDS4  MDS5  MDS6  MDS7  MDS8 
+11.97  8.14  3.05  2.02  1.91  1.58  1.36  1.29 
+(Showing 8 of 117 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(scents.cap, by=&quot;term&quot;) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">SumOfSqs</th>
+<th align="right">F</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">year</td>
+<td align="right">2</td>
+<td align="right">3.4357</td>
+<td align="right">11.7350</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">water</td>
+<td align="right">2</td>
+<td align="right">0.3819</td>
+<td align="right">1.3045</td>
+<td align="right">0.143</td>
+</tr>
+<tr class="odd">
+<td align="left">snow</td>
+<td align="right">1</td>
+<td align="right">0.1659</td>
+<td align="right">1.1330</td>
+<td align="right">0.282</td>
+</tr>
+<tr class="even">
+<td align="left">year:water</td>
+<td align="right">4</td>
+<td align="right">0.5686</td>
+<td align="right">0.9711</td>
+<td align="right">0.495</td>
+</tr>
+<tr class="odd">
+<td align="left">year:snow</td>
+<td align="right">2</td>
+<td align="right">0.4711</td>
+<td align="right">1.6089</td>
+<td align="right">0.047</td>
+</tr>
+<tr class="even">
+<td align="left">water:snow</td>
+<td align="right">2</td>
+<td align="right">0.3078</td>
+<td align="right">1.0514</td>
+<td align="right">0.351</td>
+</tr>
+<tr class="odd">
+<td align="left">year:water:snow</td>
+<td align="right">4</td>
+<td align="right">0.4897</td>
+<td align="right">0.8364</td>
+<td align="right">0.781</td>
+</tr>
+<tr class="even">
+<td align="left">Residual</td>
+<td align="right">356</td>
+<td align="right">52.1136</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="emissions-by-class" class="section level3">
+<h3>Emissions by class</h3>
+<pre class="r"><code>treatment_boxplots &lt;- function(volsmeta.vol, treatment) {
+  ggplot(volsmeta.vol %&gt;% 
+           mutate(water_snow = factor(paste(water, snow), levels=names(water_snow_pal))),
+         aes_string(x = &quot;year&quot;, fill = treatment, y = &quot;value&quot;)) + 
+    facet_wrap(vars(name), scales=&quot;free_y&quot;, labeller = as_labeller(greekify)) + geom_boxplot(outlier.size=0.2) + scale_y_sqrt() +
+    scale_fill_manual(values=list(water=water_pal, snow=snow_pal,
+                                  water_snow=water_snow_pal)[[treatment]]) + theme_bw() + 
+    labs(x=&quot;Year&quot;, y =&quot;Emissions (ng/hr/flower)&quot;, 
+         fill=c(water=&quot;Precipitation&quot;,snow=&quot;Snowmelt&quot;, 
+                water_snow=&quot;Precipitation, snowmelt&quot;)[[treatment]]) 
+}</code></pre>
+<pre class="r"><code>treatment_boxplots(volsmeta.class, &quot;water_snow&quot;)</code></pre>
+<p><img src="images/boxplots_class-1.svg" width="672" /></p>
+<pre class="r"><code>options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+treatment_effects &lt;- function(class) {
+  lmer(sqrt(value) ~ year * water * snow + (1|plot) + (1|plotid), 
+       data = filter(volsmeta.class, name==class))
+}
+
+mod.split &lt;- tibble(class=levels(ipochemsf$class)) %&gt;% 
+  mutate(model = map(class, treatment_effects),
+         test = map(model, ~ tidy(anova(.x, ddf=&quot;Ken&quot;)))) %&gt;% 
+  select(-model) %&gt;% unnest(test)
+
+mod.split %&gt;% select(class, term, p.value) %&gt;% 
+  pivot_wider(names_from=term, values_from=p.value) %&gt;%
+  kable(caption=&quot;Plasticity of emissions to treatments&quot;)</code></pre>
+<table>
+<caption>Plasticity of emissions to treatments</caption>
+<colgroup>
+<col width="17%" />
+<col width="8%" />
+<col width="8%" />
+<col width="8%" />
+<col width="13%" />
+<col width="11%" />
+<col width="13%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">class</th>
+<th align="right">year</th>
+<th align="right">water</th>
+<th align="right">snow</th>
+<th align="right">year:water</th>
+<th align="right">year:snow</th>
+<th align="right">water:snow</th>
+<th align="right">year:water:snow</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">0.0134</td>
+<td align="right">0.4108</td>
+<td align="right">0.2778</td>
+<td align="right">0.2781</td>
+<td align="right">0.4980</td>
+<td align="right">0.3453</td>
+<td align="right">0.7038</td>
+</tr>
+<tr class="even">
+<td align="left">Benzenoids</td>
+<td align="right">0.0000</td>
+<td align="right">0.7037</td>
+<td align="right">0.1168</td>
+<td align="right">0.3262</td>
+<td align="right">0.1648</td>
+<td align="right">0.7603</td>
+<td align="right">0.2210</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">0.0067</td>
+<td align="right">0.4966</td>
+<td align="right">0.4816</td>
+<td align="right">0.1200</td>
+<td align="right">0.7987</td>
+<td align="right">0.4568</td>
+<td align="right">0.7841</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">0.0639</td>
+<td align="right">0.3696</td>
+<td align="right">0.0444</td>
+<td align="right">0.4205</td>
+<td align="right">0.2650</td>
+<td align="right">0.2436</td>
+<td align="right">0.4761</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="plasticity-to-snowmelt-date-and-precipitation"
+class="section level2">
+<h2>Plasticity to snowmelt date and precipitation</h2>
+<div id="cap-1" class="section level3">
+<h3>CAP</h3>
+<pre class="r"><code>(scents.cap &lt;- capscale(sqrt(vols.good.avg) ~ sun_date * precip_est_mm, data=volsmeta.avg, distance=&quot;bray&quot;))</code></pre>
+<pre><code>Call: capscale(formula = sqrt(vols.good.avg) ~ sun_date *
+precip_est_mm, data = volsmeta.avg, distance = &quot;bray&quot;)
+
+               Inertia Proportion Rank
+Total          43.5806     1.0000     
+Constrained     1.9810     0.0455    3
+Unconstrained  55.9533     1.2839  117
+Imaginary     -14.3536    -0.3294  256
+Inertia is squared Bray distance 
+Species scores projected from &#39;sqrt&#39; &#39;vols.good.avg&#39; 
+
+Eigenvalues for constrained axes:
+ CAP1  CAP2  CAP3 
+1.511 0.357 0.113 
+
+Eigenvalues for unconstrained axes:
+ MDS1  MDS2  MDS3  MDS4  MDS5  MDS6  MDS7  MDS8 
+13.24  8.78  3.31  2.29  2.07  1.62  1.41  1.32 
+(Showing 8 of 117 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(scents.cap, by=&quot;term&quot;) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">SumOfSqs</th>
+<th align="right">F</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">sun_date</td>
+<td align="right">1</td>
+<td align="right">1.3911</td>
+<td align="right">9.199</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">precip_est_mm</td>
+<td align="right">1</td>
+<td align="right">0.4163</td>
+<td align="right">2.753</td>
+<td align="right">0.008</td>
+</tr>
+<tr class="odd">
+<td align="left">sun_date:precip_est_mm</td>
+<td align="right">1</td>
+<td align="right">0.1736</td>
+<td align="right">1.148</td>
+<td align="right">0.270</td>
+</tr>
+<tr class="even">
+<td align="left">Residual</td>
+<td align="right">370</td>
+<td align="right">55.9533</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>scents.cap &lt;- update(scents.cap, ~ sun_date + precip_est_mm)
+cap.df &lt;- fortify(scents.cap) #drop non-signif interaction for plotting
+prop.expl &lt;- summary(scents.cap)$cont$importance
+ax.labs &lt;- paste0(colnames(prop.expl)[1:2], &quot; (&quot;,round(100*prop.expl[2,1:2]),&quot;% explained)&quot;)
+ggplot(mapping=aes(x=CAP1, y=CAP2, label=greekify(label))) + 
+  geom_point(data=cap.df %&gt;% filter(score==&quot;sites&quot;) %&gt;% bind_cols(volsmeta.avg), aes(color=year))+
+  geom_segment(data=cap.df %&gt;% filter(score==&quot;biplot&quot;), aes(x=0,y=0,xend=CAP1*1.8, yend=CAP2*1.8), 
+               arrow=arrow(length=unit(0.5, &quot;lines&quot;)))+
+  geom_text(data=cap.df %&gt;% filter(score==&quot;biplot&quot;) %&gt;% 
+              mutate(label=c(&quot;Snowmelt&quot;, &quot;Precipitation&quot;)),
+            aes(x=CAP1*2, y=CAP2*2, angle=atan(CAP2/CAP1)*180/pi), hjust=c(0,1), fontface=&quot;bold&quot;) +
+  geom_text(data=cap.df %&gt;% left_join(ipochemsf, by=c(&quot;label&quot;=&quot;name&quot;)) %&gt;% filter(score==&quot;species&quot;, mean.floral&gt;1.5) %&gt;% 
+              mutate(nudge = c(0,0,0,0,0,0,1,0,0,0,0,0,1,0,0,0),
+                     label = recode(label, &quot;[(E)-hex-3-enyl] butanoate&quot;=&quot;unknown ester&quot;, &quot;[(E)-hex-3-enyl] butanoate&quot;=&quot;unknown ester&quot;, &quot;[(E)-hex-3-enyl] acetate&quot;=&quot;[(Z)-hex-3-enyl] acetate&quot;)),
+            aes(x=CAP1*3, y=CAP2*3+nudge*0.1), size=3)+ labs(x=ax.labs[1], y=ax.labs[2])+
+  scale_color_manual(&quot;Year&quot;, values=year_pal) + coord_fixed() + 
+  theme_bw() + theme(panel.grid = element_blank())</code></pre>
+<p><img src="images/cap_abs-1.svg" width="624" /></p>
+</div>
+<div id="emissions-by-class-1" class="section level3">
+<h3>Emissions by class</h3>
+<pre class="r"><code>options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+abs_effects &lt;- function(class) {
+  lmer(sqrt(value) ~ sun_date * precip_est_mm + (1|plot) + (1|plotid), 
+       data = filter(volsmeta.class, name==class))
+}
+
+mod.abs &lt;- tibble(class=levels(ipochemsf$class)) %&gt;% 
+  mutate(model = map(class, abs_effects),
+         test = map(model, ~ tidy(anova(.x, ddf=&quot;Ken&quot;)))) %&gt;% 
+  select(-model) %&gt;% unnest(test)
+
+mod.abs %&gt;% select(class, term, p.value) %&gt;% 
+  pivot_wider(names_from=term, values_from=p.value) %&gt;%
+  kable(caption=&quot;Plasticity of emissions to snowmelt date and estimated precipitation&quot;)</code></pre>
+<table>
+<caption>Plasticity of emissions to snowmelt date and estimated
+precipitation</caption>
+<thead>
+<tr class="header">
+<th align="left">class</th>
+<th align="right">sun_date</th>
+<th align="right">precip_est_mm</th>
+<th align="right">sun_date:precip_est_mm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">0.6675</td>
+<td align="right">0.5663</td>
+<td align="right">0.4931</td>
+</tr>
+<tr class="even">
+<td align="left">Benzenoids</td>
+<td align="right">0.1963</td>
+<td align="right">0.2864</td>
+<td align="right">0.4652</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">0.6550</td>
+<td align="right">0.3006</td>
+<td align="right">0.1710</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">0.3621</td>
+<td align="right">0.6619</td>
+<td align="right">0.6099</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="snowmelt-date" class="section level3">
+<h3>Snowmelt date</h3>
+<pre class="r"><code>precip.breaks &lt;- seq(25,175, by=25)
+grid.points &lt;- list(sun_date=range(treatments$sun_date), precip_est_mm=precip.breaks)
+options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+#TODO this code partially repeats chunk above
+mod.class.abs &lt;- volsmeta.class %&gt;% group_by(name) %&gt;% nest() %&gt;% 
+  mutate(model = map(data, ~lmer(value ~ sun_date * precip_est_mm + (1|plot) + (1|plotid), data=.)),
+         test = map(model, ~tidy(anova(.x, ddf=&quot;Ken&quot;))),
+         emm.grid = map(model, ~ summary(emmeans(.x, ~ precip_est_mm * sun_date, at=grid.points))))
+
+ggplot(volsmeta.class, aes(x = sun_date, y = value, color=precip_est_mm)) + facet_wrap(vars(name), scales=&quot;free_y&quot;) + 
+  geom_point(aes(shape=year), size=2) + 
+    geom_line(data = select(mod.class.abs, name, emm.grid) %&gt;% unnest(emm.grid),
+            aes(y=emmean, group=precip_est_mm))+
+  theme_minimal()+ scale_y_sqrt()  + 
+  labs(x=&quot;Snowmelt date&quot;, y =&quot;Emissions (ng/hr/flower)&quot;, shape=&quot;Year&quot;, color=&quot;Precipitation&quot;) +
+  scale_color_gradientn(&quot;Summer precipitation (mm)&quot;, colors=rev(water_pal), 
+                        values=rev(c(1, (treatments %&gt;% group_by(water) %&gt;% summarize(across(precip_est_mm, mean)) %&gt;%
+                                           pull(precip_est_mm) %&gt;% scales::rescale(from=range(precip.breaks)))[2],0)),
+                        breaks=precip.breaks)</code></pre>
+<p><img src="images/vols_abs-1.svg" width="672" /></p>
+</div>
+</div>
+<div id="plasticity-to-plant-level-soil-moisture"
+class="section level2">
+<h2>Plasticity to plant-level soil moisture</h2>
+<div id="cap-2" class="section level3">
+<h3>CAP</h3>
+<pre class="r"><code>hasVWC &lt;- !is.na(volsmeta.avg$VWC)
+(scents.cap &lt;- capscale(sqrt(vols.good.avg[hasVWC,]) ~ year * VWC, data=volsmeta.avg[hasVWC,], distance=&quot;bray&quot;))</code></pre>
+<pre><code>Call: capscale(formula = sqrt(vols.good.avg[hasVWC, ]) ~ year * VWC,
+data = volsmeta.avg[hasVWC, ], distance = &quot;bray&quot;)
+
+              Inertia Proportion Rank
+Total          40.699      1.000     
+Constrained     4.088      0.100    5
+Unconstrained  49.684      1.221  111
+Imaginary     -13.073     -0.321  235
+Inertia is squared Bray distance 
+Species scores projected from &#39;sqrt&#39; &#39;vols.good.avg[hasVWC, ]&#39; 
+
+Eigenvalues for constrained axes:
+ CAP1  CAP2  CAP3  CAP4  CAP5 
+2.692 0.852 0.299 0.163 0.084 
+
+Eigenvalues for unconstrained axes:
+ MDS1  MDS2  MDS3  MDS4  MDS5  MDS6  MDS7  MDS8 
+11.46  7.81  3.03  1.87  1.77  1.57  1.32  1.22 
+(Showing 8 of 111 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(scents.cap, by=&quot;term&quot;) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">SumOfSqs</th>
+<th align="right">F</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">year</td>
+<td align="right">2</td>
+<td align="right">3.1748</td>
+<td align="right">10.895</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">VWC</td>
+<td align="right">1</td>
+<td align="right">0.4050</td>
+<td align="right">2.780</td>
+<td align="right">0.008</td>
+</tr>
+<tr class="odd">
+<td align="left">year:VWC</td>
+<td align="right">2</td>
+<td align="right">0.5087</td>
+<td align="right">1.746</td>
+<td align="right">0.027</td>
+</tr>
+<tr class="even">
+<td align="left">Residual</td>
+<td align="right">341</td>
+<td align="right">49.6837</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="emissions-by-class-2" class="section level3">
+<h3>Emissions by class</h3>
+<pre class="r"><code>options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+sm_effects &lt;- function(class) {
+  lmer(sqrt(value) ~ year * VWC + (1|plotid), 
+       data = filter(volsmeta.class, name==class))
+}
+
+mod.sm &lt;- tibble(class=levels(ipochemsf$class)) %&gt;% 
+  mutate(model = map(class, sm_effects),
+         test = map(model, ~ tidy(anova(.x, ddf=&quot;Ken&quot;)))) %&gt;% 
+  select(-model) %&gt;% unnest(test)
+
+mod.sm %&gt;% select(class, term, p.value) %&gt;% 
+  pivot_wider(names_from=term, values_from=p.value) %&gt;%
+  kable(caption=&quot;Plasticity of emissions to soil moisture&quot;)</code></pre>
+<table>
+<caption>Plasticity of emissions to soil moisture</caption>
+<thead>
+<tr class="header">
+<th align="left">class</th>
+<th align="right">year</th>
+<th align="right">VWC</th>
+<th align="right">year:VWC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">0.0090</td>
+<td align="right">0.6565</td>
+<td align="right">0.1058</td>
+</tr>
+<tr class="even">
+<td align="left">Benzenoids</td>
+<td align="right">0.0000</td>
+<td align="right">0.1161</td>
+<td align="right">0.0201</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">0.0038</td>
+<td align="right">0.4438</td>
+<td align="right">0.1303</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">0.0378</td>
+<td align="right">0.7325</td>
+<td align="right">0.0420</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>ggplot(volsmeta.class, aes(x = VWC, color = year, y = value)) +  facet_wrap(vars(name), scales=&quot;free_y&quot;) + 
+  geom_point(size=0.5) + geom_smooth(se=F, span=1)+ theme_minimal()+ xlim(c(0,15))+ #TODO cuts off a few high VWC values
+  scale_y_sqrt() + labs(x=&quot;Soil moisture (%VWC)&quot;, y =&quot;Emissions (ng/hr/flower)&quot;, color=&quot;Year&quot;)+
+  scale_color_manual(values=year_pal)</code></pre>
+<p><img src="images/sm_vols-1.svg" width="480" /></p>
+</div>
+</div>
+<div id="plasticity-to-subplot-level-soil-moisture"
+class="section level2">
+<h2>Plasticity to subplot-level soil moisture</h2>
+<div id="cap-3" class="section level3">
+<h3>CAP</h3>
+<pre class="r"><code>(scents.cap &lt;- capscale(sqrt(vols.good.avg) ~ year * VWC, data=left_join(select(volsmeta.avg,-VWC), sm.subplotyear),
+                        distance=&quot;bray&quot;))</code></pre>
+<pre><code>Call: capscale(formula = sqrt(vols.good.avg) ~ year * VWC, data =
+left_join(select(volsmeta.avg, -VWC), sm.subplotyear), distance =
+&quot;bray&quot;)
+
+               Inertia Proportion Rank
+Total          43.5806     1.0000     
+Constrained     4.0573     0.0931    5
+Unconstrained  53.8769     1.2363  117
+Imaginary     -14.3536    -0.3294  256
+Inertia is squared Bray distance 
+Species scores projected from &#39;sqrt&#39; &#39;vols.good.avg&#39; 
+
+Eigenvalues for constrained axes:
+ CAP1  CAP2  CAP3  CAP4  CAP5 
+2.556 0.902 0.447 0.104 0.048 
+
+Eigenvalues for unconstrained axes:
+ MDS1  MDS2  MDS3  MDS4  MDS5  MDS6  MDS7  MDS8 
+12.42  8.35  3.23  2.06  1.97  1.63  1.39  1.31 
+(Showing 8 of 117 unconstrained eigenvalues)</code></pre>
+<pre class="r"><code>anova(scents.cap, by=&quot;term&quot;) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">Df</th>
+<th align="right">SumOfSqs</th>
+<th align="right">F</th>
+<th align="right">Pr(&gt;F)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">year</td>
+<td align="right">2</td>
+<td align="right">3.4357</td>
+<td align="right">11.7336</td>
+<td align="right">0.001</td>
+</tr>
+<tr class="even">
+<td align="left">VWC</td>
+<td align="right">1</td>
+<td align="right">0.1433</td>
+<td align="right">0.9786</td>
+<td align="right">0.444</td>
+</tr>
+<tr class="odd">
+<td align="left">year:VWC</td>
+<td align="right">2</td>
+<td align="right">0.4784</td>
+<td align="right">1.6338</td>
+<td align="right">0.039</td>
+</tr>
+<tr class="even">
+<td align="left">Residual</td>
+<td align="right">368</td>
+<td align="right">53.8769</td>
+<td align="right">NA</td>
+<td align="right">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="emissions-by-class-3" class="section level3">
+<h3>Emissions by class</h3>
+<pre class="r"><code>options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+sm_effects &lt;- function(class) {
+  lmer(sqrt(value) ~ year * VWC + (1|plotid), 
+       data = filter(left_join(select(volsmeta.class,-VWC), sm.subplotyear), name==class))
+}
+
+mod.sm &lt;- tibble(class=levels(ipochemsf$class)) %&gt;% 
+  mutate(model = map(class, sm_effects),
+         test = map(model, ~ tidy(anova(.x, ddf=&quot;Ken&quot;)))) %&gt;% 
+  select(-model) %&gt;% unnest(test)
+
+mod.sm %&gt;% select(class, term, p.value) %&gt;% 
+  pivot_wider(names_from=term, values_from=p.value) %&gt;%
+  kable(caption=&quot;Plasticity of emissions to subplot-level soil moisture&quot;)</code></pre>
+<table>
+<caption>Plasticity of emissions to subplot-level soil
+moisture</caption>
+<thead>
+<tr class="header">
+<th align="left">class</th>
+<th align="right">year</th>
+<th align="right">VWC</th>
+<th align="right">year:VWC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">0.0442</td>
+<td align="right">0.5431</td>
+<td align="right">0.0515</td>
+</tr>
+<tr class="even">
+<td align="left">Benzenoids</td>
+<td align="right">0.8915</td>
+<td align="right">0.9030</td>
+<td align="right">0.7643</td>
+</tr>
+<tr class="odd">
+<td align="left">Sesquiterpenes</td>
+<td align="right">0.1005</td>
+<td align="right">0.3670</td>
+<td align="right">0.0834</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">0.0552</td>
+<td align="right">0.2474</td>
+<td align="right">0.0917</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>ggplot(left_join(select(volsmeta.class,-VWC), sm.subplotyear), aes(x = VWC, color = year, y = value)) + 
+  facet_wrap(vars(name), scales=&quot;free_y&quot;) + 
+  geom_point(size=0.5) + geom_smooth(se=F, span=1)+ theme_minimal()+ 
+  scale_y_sqrt() + labs(x=&quot;Soil moisture (%VWC)&quot;, y =&quot;Emissions (ng/hr/flower)&quot;, color=&quot;Year&quot;)+
+  scale_color_manual(values=year_pal)</code></pre>
+<p><img src="images/sm_subplot_vols-1.svg" width="480" /></p>
+</div>
+</div>
+</div>
+<div id="selection" class="section level1">
+<h1>Selection</h1>
+<div id="emissions-by-class-4" class="section level2">
+<h2>Emissions by class</h2>
+<pre class="r"><code>trait.class.wide &lt;- bind_cols(volsmeta.avg, vols.class) %&gt;% left_join(mnps.plantyr.traits) %&gt;% 
+  select(plantid, year, water, snow, all_of(fitnesstraits), all_of(names(class_pal))) 
+ #mutate(across(all_of(names(class_pal)), sqrt))
+
+selection_effects &lt;- function(fitnesstrait) {
+  options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+  lm(relfitness ~ year * water * snow + 
+     Monoterpenes * snow + Monoterpenes * water + Monoterpenes * year +
+     Sesquiterpenes * snow + Sesquiterpenes * water + Sesquiterpenes * year + 
+     Benzenoids * snow + Benzenoids * water + Benzenoids * year +
+     Aliphatics * snow + Aliphatics * water + Aliphatics * year,
+       data = trait.class.wide %&gt;% rename(fitness=fitnesstrait) %&gt;% 
+       mutate(relfitness = fitness/mean(fitness, na.rm=T)))
+}
+
+fitnesstraits.sd &lt;- map_dbl(fitnesstraits, ~sd(mnps.plantyr.traits[[.x]], na.rm=T)) %&gt;% set_names(fitnesstraits)
+class.sd &lt;- map_dbl(names(class_pal), ~sd(trait.class.wide[[.x]], na.rm=T)) %&gt;% set_names(names(class_pal)) 
+mnps.plantyr.traits %&gt;% pivot_longer(all_of(traits)) %&gt;% group_by(name) %&gt;% 
+  summarize(mean=mean(value, na.rm=T), sd=sd(value, na.rm=T),
+            n_plants=sum(!is.na(value))) %&gt;% 
+    mutate(name = traitnames.units[name]) %&gt;% 
+  write_csv(&quot;data/trait_means.csv&quot;, na=&quot;&quot;)
+bind_rows(volsmeta.avg, vols.good.top) %&gt;% pivot_longer(all_of(ipogood.top)) %&gt;% group_by(name) %&gt;% 
+  summarize(mean=mean(value, na.rm=T), sd=sd(value, na.rm=T),
+            n_plants=sum(!is.na(value))) %&gt;%  
+  write_csv(&quot;data/volatiles/volatiles_means.csv&quot;, na=&quot;&quot;)
+
+get_emt_class &lt;- function(mod) {
+  map_dfr(set_names(names(class_pal)), ~emtrends(mod, c(&quot;year&quot;,&quot;water&quot;,&quot;snow&quot;), var=.x) %&gt;% 
+            summary %&gt;% as_tibble %&gt;% rename(&quot;trend&quot; = ends_with(&quot;trend&quot;)), .id=&quot;class&quot;)
+}
+
+mod.selection &lt;- tibble(fitnesstrait=fitnesstraits) %&gt;% 
+  mutate(model = map(fitnesstrait, selection_effects),
+         emt = map(model, get_emt_class),
+         test = map(model, ~ tidy(car::Anova(.x, type=3))))
+
+mod.selection %&gt;% unnest(test) %&gt;% select(fitnesstrait, term, p.value) %&gt;% 
+  pivot_wider(names_from=fitnesstrait, values_from=p.value) %&gt;%
+  filter(term!=&quot;Residuals&quot;) %&gt;% 
+  kable(caption=&quot;Selection of emissions in each treatment&quot;, digits=4)</code></pre>
+<table>
+<caption>Selection of emissions in each treatment</caption>
+<colgroup>
+<col width="23%" />
+<col width="11%" />
+<col width="30%" />
+<col width="17%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">term</th>
+<th align="right">seeds_est</th>
+<th align="right">seeds_initiated_per_flower</th>
+<th align="right">prop_uninfested</th>
+<th align="right">eggs_per_flower</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">(Intercept)</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+<td align="right">0.0000</td>
+</tr>
+<tr class="even">
+<td align="left">year</td>
+<td align="right">0.1204</td>
+<td align="right">0.0002</td>
+<td align="right">0.0147</td>
+<td align="right">0.0000</td>
+</tr>
+<tr class="odd">
+<td align="left">water</td>
+<td align="right">0.5879</td>
+<td align="right">0.1559</td>
+<td align="right">0.2391</td>
+<td align="right">0.7175</td>
+</tr>
+<tr class="even">
+<td align="left">snow</td>
+<td align="right">0.1220</td>
+<td align="right">0.0495</td>
+<td align="right">0.8971</td>
+<td align="right">0.4551</td>
+</tr>
+<tr class="odd">
+<td align="left">Monoterpenes</td>
+<td align="right">0.0537</td>
+<td align="right">0.3140</td>
+<td align="right">0.6509</td>
+<td align="right">0.1699</td>
+</tr>
+<tr class="even">
+<td align="left">Sesquiterpenes</td>
+<td align="right">0.3199</td>
+<td align="right">0.9099</td>
+<td align="right">0.0876</td>
+<td align="right">0.6085</td>
+</tr>
+<tr class="odd">
+<td align="left">Benzenoids</td>
+<td align="right">0.0210</td>
+<td align="right">0.1957</td>
+<td align="right">0.1056</td>
+<td align="right">0.2164</td>
+</tr>
+<tr class="even">
+<td align="left">Aliphatics</td>
+<td align="right">0.7890</td>
+<td align="right">0.7748</td>
+<td align="right">0.3267</td>
+<td align="right">0.5234</td>
+</tr>
+<tr class="odd">
+<td align="left">year:water</td>
+<td align="right">0.0364</td>
+<td align="right">0.0044</td>
+<td align="right">0.3618</td>
+<td align="right">0.9932</td>
+</tr>
+<tr class="even">
+<td align="left">year:snow</td>
+<td align="right">0.0024</td>
+<td align="right">0.2168</td>
+<td align="right">0.9600</td>
+<td align="right">0.5647</td>
+</tr>
+<tr class="odd">
+<td align="left">water:snow</td>
+<td align="right">0.4838</td>
+<td align="right">0.3688</td>
+<td align="right">0.4163</td>
+<td align="right">0.6692</td>
+</tr>
+<tr class="even">
+<td align="left">snow:Monoterpenes</td>
+<td align="right">0.1354</td>
+<td align="right">0.4203</td>
+<td align="right">0.4415</td>
+<td align="right">0.5806</td>
+</tr>
+<tr class="odd">
+<td align="left">water:Monoterpenes</td>
+<td align="right">0.7900</td>
+<td align="right">0.2902</td>
+<td align="right">0.3872</td>
+<td align="right">0.4584</td>
+</tr>
+<tr class="even">
+<td align="left">year:Monoterpenes</td>
+<td align="right">0.4422</td>
+<td align="right">0.8341</td>
+<td align="right">0.0122</td>
+<td align="right">0.2275</td>
+</tr>
+<tr class="odd">
+<td align="left">snow:Sesquiterpenes</td>
+<td align="right">0.4964</td>
+<td align="right">0.0481</td>
+<td align="right">0.0521</td>
+<td align="right">0.1243</td>
+</tr>
+<tr class="even">
+<td align="left">water:Sesquiterpenes</td>
+<td align="right">0.5936</td>
+<td align="right">0.3454</td>
+<td align="right">0.0011</td>
+<td align="right">0.7203</td>
+</tr>
+<tr class="odd">
+<td align="left">year:Sesquiterpenes</td>
+<td align="right">0.7790</td>
+<td align="right">0.9984</td>
+<td align="right">0.0596</td>
+<td align="right">0.3752</td>
+</tr>
+<tr class="even">
+<td align="left">snow:Benzenoids</td>
+<td align="right">0.5874</td>
+<td align="right">0.9817</td>
+<td align="right">0.7818</td>
+<td align="right">0.5409</td>
+</tr>
+<tr class="odd">
+<td align="left">water:Benzenoids</td>
+<td align="right">0.6192</td>
+<td align="right">0.3523</td>
+<td align="right">0.1235</td>
+<td align="right">0.6857</td>
+</tr>
+<tr class="even">
+<td align="left">year:Benzenoids</td>
+<td align="right">0.2099</td>
+<td align="right">0.3278</td>
+<td align="right">0.4836</td>
+<td align="right">0.3909</td>
+</tr>
+<tr class="odd">
+<td align="left">snow:Aliphatics</td>
+<td align="right">0.0479</td>
+<td align="right">0.1324</td>
+<td align="right">0.2281</td>
+<td align="right">0.3646</td>
+</tr>
+<tr class="even">
+<td align="left">water:Aliphatics</td>
+<td align="right">0.7942</td>
+<td align="right">0.2255</td>
+<td align="right">0.6274</td>
+<td align="right">0.0708</td>
+</tr>
+<tr class="odd">
+<td align="left">year:Aliphatics</td>
+<td align="right">0.6088</td>
+<td align="right">0.9736</td>
+<td align="right">0.5643</td>
+<td align="right">0.3975</td>
+</tr>
+<tr class="even">
+<td align="left">year:water:snow</td>
+<td align="right">0.6179</td>
+<td align="right">0.8074</td>
+<td align="right">0.2268</td>
+<td align="right">0.0890</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>mod.selection %&gt;% filter(fitnesstrait != &quot;eggs_per_flower&quot;) %&gt;% 
+  select(fitnesstrait, emt) %&gt;% unnest(emt) %&gt;% 
+  mutate(classsd = class.sd[class],
+         trend.std = trend * classsd,
+         uSE = (trend + SE) * classsd,
+         lSE = (trend - SE) * classsd,
+         water_snow = factor(paste(water, snow), levels=names(water_snow_pal))) %&gt;% 
+  ggplot(aes(x=class, color=water_snow, y=trend.std, ymin=lSE, ymax=uSE)) +
+  facet_grid(cols=vars(fitnesstrait), rows=vars(year), labeller=as_labeller(c(set_names(2018:2020), fitnessnames))) +
+  geom_hline(yintercept=0)+
+  geom_pointrange(position=position_dodge(width=0.5), size=0.2) +
+  scale_color_manual(values=water_snow_pal) +
+  labs(x=&quot;Compound class&quot;, y = &quot;Standardized selection gradient&quot;, color=&quot;Precipitation,\nsnowmelt&quot;) +
+  theme_bw() + theme(axis.text.x = element_text(angle=90, hjust=1), legend.position=&quot;top&quot;)</code></pre>
+<p><img src="images/selection_class_gradient-1.svg" width="528" /></p>
+</div>
+<div id="selection-gradients" class="section level2">
+<h2>Selection gradients</h2>
+<pre class="r"><code>#Following method of [Chong et al. 2018](https://doi.org/10.1002/evl3.63) for reconstructing selection estimates from estimates of selection on PCs: Beta = E * A.
+
+prcomp_std &lt;- function(data) {
+  data %&gt;% mutate(across(everything(), ~ (.x-mean(.x, na.rm=T))/sd(.x, na.rm=T))) %&gt;% #center and scale
+  prcomp(center = FALSE, scale. = FALSE)
+}
+
+calculate_beta &lt;- function(E, slopes, resid.df) {
+  data.frame(B = E %*% slopes$A,
+             SE = sqrt(E ^ 2 %*% slopes$SE ^ 2)) %&gt;% 
+    mutate(p.value = 2*pt(abs(B)/SE, df=resid.df, lower.tail=F)) %&gt;% #calculate t statistic from difference in means and SE, then look up one-tailed p in the upper tail, double to get a 2-tailed test
+    rownames_to_column(&quot;trait&quot;)
+}
+
+selection_pca &lt;- function(year=names(year_pal), water=names(water_pal), snow=names(snow_pal), 
+                          fitnesstrait, n.PCs, PCA, mdata) {
+  if(ncol(PCA$x) &lt; n.PCs) {
+    warning(paste(&quot;Only &quot;, ncol(PCA$x), &quot;PCs&quot;))
+    n.PCs &lt;- ncol(PCA$x)
+  }
+  std.traits &lt;- mdata %&gt;% bind_cols(as.data.frame(PCA$x)) %&gt;% 
+    filter(year %in% .env$year, water %in% .env$water, snow %in% .env$snow) %&gt;% 
+    select(-any_of(fitnesstrait)) %&gt;% 
+    left_join(mnps.plantyr.traits %&gt;% select(year, plotid, plantid, all_of(fitnesstrait)), by=c(&quot;year&quot;, &quot;plotid&quot;, &quot;plantid&quot;)) %&gt;% 
+    select(all_of(fitnesstrait), any_of(names(treatments)), starts_with(&quot;PC&quot;)) %&gt;% 
+    rename(&quot;fitness&quot; = all_of(fitnesstrait)) %&gt;% 
+    #group_by(year) %&gt;% 
+    mutate(relfitness = fitness/mean(fitness, na.rm=T), .keep=&quot;unused&quot;) %&gt;% #relative fitness across years
+    drop_na(relfitness) %&gt;% 
+    select(where(~sum(is.na(.))==0))
+  
+  # Regress relative fitness on PCs
+  if(length(year)+length(water)+length(snow)==8) {
+      selection.on.PCs &lt;- lm(formula(paste(&quot;relfitness ~&quot;, paste0(&quot;PC&quot;,1:n.PCs, collapse=&quot; + &quot;), 
+                                           &quot; + precip_est_mm + sun_date&quot;)), data = std.traits) 
+      #account for direct environmental effects on fitness 
+  } else { 
+      selection.on.PCs &lt;- lm(formula(paste(&quot;relfitness ~&quot;, paste0(&quot;PC&quot;,1:n.PCs, collapse=&quot; + &quot;))), data = std.traits)
+  }
+  
+  # Convert selection gradients on PCs to gradients on traits
+  calculate_beta(E = PCA$rotation[,1:n.PCs],
+                 slopes = tidy(selection.on.PCs) %&gt;% filter(str_sub(term,1,2) == &quot;PC&quot;) %&gt;%
+                   rename(A=estimate, SE=std.error), 
+                 resid.df = aov(selection.on.PCs)$df.residual)
+}
+
+vols.PCA &lt;- prcomp_std(vols.good.top)
+
+floraltraits.pca &lt;- floraltraits[-8] #drop total flowers
+mnps.PCA.nosepal &lt;- mnps.plantyr %&gt;% select(all_of(floraltraits.pca[-4])) %&gt;% drop_na() %&gt;% prcomp_std()
+meta.pca.nosepal &lt;- mnps.plantyr %&gt;% filter(mnps.plantyr %&gt;% select(all_of(floraltraits.pca[-4])) %&gt;% vctrs::vec_detect_complete())</code></pre>
+<pre class="r"><code>calculate_all_gradients_nosepal &lt;- function(trts) { 
+  mutate(trts, PCA=list(vols.PCA), mdata = list(volsmeta.avg), n.PCs = 5) %&gt;% 
+  bind_rows(mutate(., 
+                   n.PCs = 4,
+                   PCA =   list(mnps.PCA.nosepal),
+                   mdata = list(meta.pca.nosepal))) %&gt;% 
+  mutate(betas = pmap(., selection_pca)) %&gt;% select(-PCA, -mdata) %&gt;% unnest(betas)
+}
+
+all.beta.allyrs &lt;- expand_grid(fitnesstrait=fitnesstraits) %&gt;% 
+  calculate_all_gradients_nosepal() #run the PC model with continuous environmental variables</code></pre>
+</div>
+<div id="elastic-net" class="section level2">
+<h2>Elastic net</h2>
+<pre class="r"><code>trait_en_reg &lt;- function(fitnesstrait, regtraits, en_alpha, data,
+                         year=names(year_pal), water=names(water_pal), snow=names(snow_pal)) {
+  std.traits &lt;- data %&gt;% 
+    filter(year %in% .env$year, water %in% .env$water, snow %in% .env$snow) %&gt;% 
+    mutate(across(all_of(regtraits), ~ (.x-mean(.x))/sd(.x))) %&gt;%  #center and scale traits
+    select(-any_of(fitnesstrait)) %&gt;% 
+    left_join(mnps.plantyr.traits %&gt;% select(year, plotid, plantid, all_of(fitnesstrait)), by=c(&quot;year&quot;, &quot;plotid&quot;, &quot;plantid&quot;)) %&gt;% 
+    select(all_of(fitnesstrait), any_of(names(treatments)), all_of(regtraits)) %&gt;% 
+    rename(&quot;fitness&quot; = all_of(fitnesstrait)) %&gt;% 
+    mutate(relfitness = fitness/mean(fitness, na.rm=T), .keep=&quot;unused&quot;) %&gt;% #relative fitness across years
+    drop_na(relfitness) %&gt;% 
+    select(where(~sum(is.na(.))==0))
+  
+  Y = std.traits %&gt;% select(relfitness) %&gt;% as.matrix()
+  if(length(year)+length(water)+length(snow)==8) {
+    X = std.traits %&gt;% select(all_of(c(regtraits, &quot;precip_est_mm&quot;, &quot;sun_date&quot;))) %&gt;% as.matrix()
+  } else {
+    X = std.traits %&gt;% select(all_of(regtraits)) %&gt;% as.matrix()
+  }
+  crossvalidate &lt;- cv.glmnet(x=X, y=Y, alpha = en_alpha)
+  best_lambda &lt;- crossvalidate$lambda.min
+  glmnet(x=X, y=Y, alpha = en_alpha, lambda = best_lambda) %&gt;% tidy() %&gt;% rename(B=estimate, trait=term)
+}
+
+enregs &lt;- expand_grid(fitnesstrait=fitnesstraits, en_alpha = seq(0, 1, by=0.25),
+                               regtraits = list(c(floraltraits.pca[-4])), data=list(meta.pca.nosepal)) %&gt;% 
+  mutate(betas = pmap(., trait_en_reg)) %&gt;% select(-regtraits, -data) %&gt;% 
+  unnest(betas) %&gt;% filter(!trait %in% c(&quot;(Intercept)&quot;, &quot;precip_est_mm&quot;, &quot;sun_date&quot;)) </code></pre>
+<pre class="r"><code>enregs.vol &lt;- expand_grid(fitnesstrait=fitnesstraits, en_alpha = seq(0, 1, by=0.25),
+                               regtraits = list(c(ipogood.top)), data = list(bind_cols(volsmeta.avg, vols.good.top))) %&gt;% 
+  mutate(betas = pmap(., trait_en_reg)) %&gt;% select(-regtraits, -data) %&gt;% 
+  unnest(betas) %&gt;% filter(!trait %in% c(&quot;(Intercept)&quot;, &quot;precip_est_mm&quot;, &quot;sun_date&quot;)) %&gt;% 
+  mutate(trait = trait %&gt;% greekify() %&gt;% recode(!!!traitnames) %&gt;% 
+           factor(levels = rev(c(traitnames, greekify(ipogood.top))))) </code></pre>
+<pre class="r"><code>calculate_all_gradients_nosepal_en &lt;- function(trts) { 
+  mutate(trts,  data = list(bind_cols(volsmeta.avg, vols.good.top)), regtraits = list(ipogood.top)) %&gt;% 
+  bind_rows(mutate(trts, data = list(meta.pca.nosepal), regtraits = list(c(floraltraits.pca[-4])))) %&gt;% 
+  mutate(en_alpha=0.5) %&gt;% 
+  mutate(betas = pmap(., trait_en_reg)) %&gt;% select(-regtraits, -data) %&gt;% unnest(betas)
+}
+
+en.beta.water &lt;- expand_grid(fitnesstrait=fitnesstraits, year=names(year_pal), water=names(water_pal)) %&gt;%
+  calculate_all_gradients_nosepal_en()
+en.beta.snow &lt;- expand_grid(fitnesstrait=fitnesstraits, year=names(year_pal), snow=names(snow_pal)) %&gt;%
+  calculate_all_gradients_nosepal_en()
+
+en.beta.water.allyrs &lt;- expand_grid(fitnesstrait=fitnesstraits, water=names(water_pal)) %&gt;% mutate(year=list(names(year_pal))) %&gt;%
+  calculate_all_gradients_nosepal_en()
+en.beta.snow.allyrs &lt;- expand_grid(fitnesstrait=fitnesstraits, snow=names(snow_pal)) %&gt;% mutate(year=list(names(year_pal))) %&gt;%
+  calculate_all_gradients_nosepal_en()</code></pre>
+</div>
+<div id="selection-vs.-absolute-snowmelt-precip" class="section level2">
+<h2>Selection vs. absolute snowmelt, precip</h2>
+<pre class="r"><code>selection_mod_abs &lt;- function(trait, response, use_trait=TRUE, use_env=TRUE) {
+  if(trait %in% ipogood) data &lt;- vols.traits 
+  else data &lt;- mnps.plantyr %&gt;% mutate(prop_uninfested = 1 - prop_infested)
+  vm.abs &lt;- data %&gt;% 
+    select(all_of(c(response, trait)), sun_date, precip_est_mm, year) %&gt;% 
+    rename(&quot;trait&quot; = all_of(trait), &quot;response&quot; = all_of(response)) %&gt;% 
+    filter(!is.infinite(response), !is.nan(response), !is.na(response)) %&gt;% 
+    mutate(trait = (trait-mean(trait, na.rm=T))/sd(trait, na.rm=T)) %&gt;% #center and scale
+    #group_by(year) %&gt;% 
+    mutate(response = response/mean(response, na.rm=T)) #%&gt;% ungroup() #relative fitness across years
+  options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+  if(use_trait) {
+    if(use_env) lm(response ~ trait * sun_date + trait * precip_est_mm, data = vm.abs)
+    else        lm(response ~ trait, data = vm.abs)
+  } else        lm(response ~ sun_date + precip_est_mm, data = vm.abs)
+}
+
+mod.selection.abs &lt;- expand.grid(list(response = fitnesstraits, trait = c(ipogood, floraltraits))) %&gt;%
+  mutate(model = pmap(., selection_mod_abs),
+         coefs = map(model, tidy))
+
+mod.selection.tests &lt;- mod.selection.abs %&gt;% 
+  left_join(ipochemsf, by=c(&quot;trait&quot;=&quot;name&quot;)) %&gt;% 
+  mutate(freq.floral = replace_na(freq.floral, 1)) %&gt;% #morph/nectar traits
+  filter(freq.floral&gt;0.1) %&gt;% 
+    mutate(tests = map(model, ~ tidy(car::Anova(.x, type=3)))) %&gt;% 
+  select(-model) %&gt;% unnest(coefs) %&gt;% 
+  filter(str_detect(term, &quot;trait&quot;))
+
+#Drop environmental interactions if both not significant
+mod.selection.abs.drop &lt;- expand.grid(list(response = fitnesstraits, trait = c(ipogood, floraltraits))) %&gt;%
+  left_join(mod.selection.tests %&gt;% select(response, trait, term, p.value) %&gt;% 
+              mutate(response=as.character(response)) %&gt;% 
+              filter(term != &quot;trait&quot;) %&gt;% pivot_wider(names_from = term, values_from = p.value) %&gt;% 
+              mutate(use_env = `trait:sun_date` &lt; 0.05 | `trait:precip_est_mm` &lt; 0.05, .keep=&quot;unused&quot;)) %&gt;% 
+  mutate(model = pmap(., selection_mod_abs),
+         coefs = map(model, tidy))
+
+mod.selection.tests.drop &lt;- mod.selection.abs.drop %&gt;% 
+  left_join(ipochemsf, by=c(&quot;trait&quot;=&quot;name&quot;)) %&gt;% 
+  mutate(freq.floral = replace_na(freq.floral, 1)) %&gt;% #morph/nectar traits
+  filter(freq.floral&gt;0.1) %&gt;% 
+    mutate(tests = map(model, ~ tidy(car::Anova(.x, type=3)))) %&gt;% 
+  select(-model) %&gt;% unnest(coefs) %&gt;% 
+  filter(str_detect(term, &quot;trait&quot;))</code></pre>
+</div>
+</div>
+<div id="adaptive-plasticity" class="section level1">
+<h1>Adaptive plasticity</h1>
+<pre class="r"><code>selection_mod_treatments &lt;- function(response, trait, 
+                                     year=names(year_pal), water=names(water_pal), snow=names(snow_pal)) {
+  if(trait %in% ipogood) data &lt;- vols.traits 
+  else data &lt;- mnps.plantyr %&gt;% mutate(prop_uninfested = 1 - prop_infested)
+  std.traits &lt;- data[, c(response, trait, &quot;year&quot;,&quot;water&quot;,&quot;snow&quot;)] %&gt;% 
+    set_names(c(&quot;response&quot;,&quot;trait&quot;,&quot;year&quot;,&quot;water&quot;,&quot;snow&quot;)) %&gt;% 
+    filter(year %in% .env$year, water %in% .env$water, snow %in% .env$snow) %&gt;% 
+    filter(!is.infinite(response), !is.nan(response), !is.na(response), !is.na(trait)) %&gt;% 
+    mutate(trait = (trait-mean(trait))/sd(trait), response = response/mean(response)) 
+  options(contrasts = c(&quot;contr.sum&quot;, &quot;contr.poly&quot;))
+  if(nrow(std.traits) == 0) return(NA)
+  else return(lm(response ~ trait, data = std.traits))
+}
+calculate_all_indiv &lt;- function(trts) { 
+  trts %&gt;% mutate(model = pmap(., selection_mod_treatments)) %&gt;%
+    filter(!is.na(model)) %&gt;% #some combinations with zero rows
+    mutate(n = map_int(model, ~nrow(model.frame(.x))),
+           coefs = map(model, tidy)) %&gt;% 
+    select(-model) %&gt;% unnest(coefs) %&gt;% filter(term==&quot;trait&quot;) %&gt;% 
+    rename(fitnesstrait=response, B=estimate, SE=std.error)
+}
+
+indiv.beta.water &lt;- expand_grid(response=fitnesstraits,  trait = c(ipogood, floraltraits),
+                                year=names(year_pal), water=names(water_pal)) %&gt;% calculate_all_indiv()
+indiv.beta.snow &lt;- expand_grid(response=fitnesstraits,  trait = c(ipogood, floraltraits),
+                                year=names(year_pal), snow=names(snow_pal)) %&gt;% calculate_all_indiv()</code></pre>
+<pre class="r"><code>plasticity.data &lt;- 
+  bind_rows(volsmeta.good.top %&gt;% mutate(index=as.integer(index)), 
+            mnps.plantyr %&gt;% pivot_longer(all_of(floraltraits.pca)) %&gt;% drop_na(value)) %&gt;% 
+  group_by(name, year) %&gt;% nest() %&gt;% 
+  mutate(model = map(data, ~lm(value ~ snow + water, data=.)), # + (1|plotid) + (1|snow:plot)
+         emm = map(model, ~ summary(emmeans(.x, ~ snow + water))%&gt;% filter(water==&quot;Control&quot;, snow==&quot;Normal&quot;)), 
+         test =  map(model, ~tidy(multcomp:::summary.glht(multcomp::glht(.x, 
+                                                                         linfct = multcomp::mcp(water = c(&quot;Addition - Control = 0&quot;,
+                                                                                                          &quot;Reduction - Control = 0&quot;,
+                                                                                                          &quot;Reduction - Addition = 0&quot;),
+                                                                                                snow = c(&quot;Early - Normal = 0&quot;))),
+                                                          multcomp::adjusted(type=&quot;none&quot;))))) %&gt;%#adjust later 
+  select(year, name, emm, test) %&gt;% unnest(c(emm, test)) %&gt;% 
+  mutate(difference=estimate, #difference in glht means
+         estimate=estimate/emmean, std.error=std.error/emmean, #divide estimated difference in means by emm in Normal Control subplots
+         contrast = str_replace(str_remove_all(contrast, &quot;[a-z\\s]&quot;),&quot;-&quot;,&quot;_&quot;),
+         newenv = recode(contrast, &quot;A_C&quot;=&quot;Addition&quot;, &quot;R_C&quot;=&quot;Reduction&quot;,&quot;E_N&quot;=&quot;Early&quot;),
+         multiplecomps = contrast %in% c(&quot;A_C&quot;,&quot;R_C&quot;)) %&gt;% #these two reuse the same control data
+  group_by(multiplecomps, name, year) %&gt;% #two comparisons to Control made within each volatile and year 
+  mutate(plasticity.p.value = ifelse(multiplecomps, p.adjust(p.value, method=&quot;fdr&quot;), p.value)) %&gt;% 
+  ungroup %&gt;% select(year, name, newenv, plasticity.p.value, difference, estimate, std.error) 
+
+adaptive.plasticity.data &lt;- plasticity.data %&gt;% 
+  left_join(bind_rows(rename(indiv.beta.water, newenv=water), #was all.beta.water for the PCA analysis
+                      rename(indiv.beta.snow, newenv=snow)) %&gt;% 
+              filter(fitnesstrait!=&quot;eggs_per_flower&quot;) %&gt;% 
+              rename(name=trait)) %&gt;% 
+  left_join(bind_rows(rename(en.beta.water, newenv=water), 
+                      rename(en.beta.snow, newenv=snow)) %&gt;%
+              rename(B.en = B, name=trait)) %&gt;% 
+  left_join(ipochemsf %&gt;% select(-starts_with(&quot;area&quot;))) %&gt;% 
+  mutate(class = fct_na_value_to_level(class, &quot;Other trait&quot;))
+
+envnames &lt;- c(Addition=&quot;additional precipitation&quot;,
+             Reduction=&quot;reduced precipitation&quot;,
+             Early=&quot;early snowmelt&quot;)
+
+adaptive.plasticity.data %&gt;% filter(newenv!=&quot;R_A&quot;) %&gt;% 
+  mutate(fitnesstrait=factor(fitnesstrait, levels = sort(fitnesstraits)),
+         plasticity.signif = plasticity.p.value &lt; 0.05, selection.signif= p.value &lt; 0.05,
+         en.indiv.same.direction = replace_na(if_else(sign(B) == sign(B.en),&quot;same&quot;, &quot;opposite&quot;), &quot;en_zeroed&quot;),
+         plasticity.selection.signif = paste0(plasticity.signif,selection.signif, 
+                                              if_else(selection.signif, en.indiv.same.direction,&quot;&quot;)) %&gt;% 
+           fct_relevel(&quot;FALSEFALSE&quot;,&quot;TRUEFALSE&quot;),
+         log2FC = log2(estimate+1)) %&gt;%  #log2(fold change) is symmetric for increases and decreases. Add 1 to get ratio.
+  group_by(newenv) %&gt;% nest() %&gt;% 
+  pwalk(function(newenv, data) { 
+    print(ggplot(data, aes(x=log2FC, y=B, color=class)) + 
+            labs(x=paste(&quot;Plasticity to &quot;,envnames[newenv],&quot;(log2 fold change)&quot;), 
+                 y=paste(&quot;Selection gradient \U03B2 under&quot;,envnames[newenv])) + 
+            facet_grid(rows=vars(year), cols=vars(fitnesstrait), scales=&quot;fixed&quot;, 
+                       labeller=as_labeller(c(fitnessnames, set_names(levels(treatments$year)))))+
+            annotate(&quot;rect&quot;, xmin = 0, xmax = Inf, ymin = 0, ymax = -Inf, fill= &quot;black&quot;, alpha=0.1) + 
+            annotate(&quot;rect&quot;, xmin = 0, xmax = -Inf, ymin = Inf, ymax = 0, fill= &quot;black&quot;, alpha=0.1) +
+            geom_errorbar(aes(ymin=B-SE, ymax=B+SE), alpha=0.3) + 
+            geom_errorbarh(aes(xmin=log2(estimate+1-std.error), xmax=log2(estimate+1+std.error)), alpha=0.3) +#TODO check math
+            geom_point(aes(shape = plasticity.selection.signif), size=2.5) + 
+            scale_shape_manual(&quot;P &lt; 0.05&quot;, values=c(1,17,19,15), guide=guide_legend(override.aes = list(size=5)),
+                               labels=c(&quot;neither&quot;, &quot;plasticity&quot;, &quot;selection&quot;,&quot;selection+EN&quot;), drop=FALSE)+ 
+            coord_cartesian(ylim = c(min(data$B)*1.05, max(data$B)*1.05), xlim = c(min(data$log2FC)*1.05, max(data$log2FC)*1.05))+
+            scale_color_manual(&quot;Compound class&quot;, values=c(class_pal,&quot;Other trait&quot;=&quot;black&quot;), 
+                               guide=guide_legend(override.aes = list(size=5))) + 
+            theme_bw() + theme(axis.text = element_text(size=7), panel.grid = element_blank()))})</code></pre>
+<p><img src="images/adaptive-1.svg" width="672" /><img src="images/adaptive-2.svg" width="672" /><img src="images/adaptive-3.svg" width="672" /></p>
+<pre class="r"><code>adaptive.plasticity.data %&gt;% filter(newenv != &quot;R_A&quot;) %&gt;% count(p.value &lt; 0.05, plasticity.p.value &lt; 0.05) %&gt;% kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">p.value &lt; 0.05</th>
+<th align="left">plasticity.p.value &lt; 0.05</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">FALSE</td>
+<td align="left">FALSE</td>
+<td align="right">418</td>
+</tr>
+<tr class="even">
+<td align="left">FALSE</td>
+<td align="left">TRUE</td>
+<td align="right">42</td>
+</tr>
+<tr class="odd">
+<td align="left">TRUE</td>
+<td align="left">FALSE</td>
+<td align="right">44</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>#Cohen&#39;s d
+vols.sd &lt;- map_dbl(ipogood, ~sd(vols.good[[.x]])) %&gt;% set_names(ipogood)
+plasticity.cohens.d &lt;- plasticity.data %&gt;% filter(newenv!=&quot;R_A&quot;) %&gt;% 
+  left_join(enframe(c(vols.sd, alltraits.sd), value=&quot;trait.sd&quot;)) %&gt;% 
+  mutate(cohens.d = difference / trait.sd) %&gt;% 
+  mutate(traitgroup = if_else(name %in% ipogood.top, &quot;volatile&quot;, &quot;other&quot;)) 
+
+plasticity.cohens.d.summary &lt;- plasticity.cohens.d %&gt;% 
+  group_by(newenv, traitgroup) %&gt;% 
+  summarize(absolute_cohen = mean(abs(cohens.d)),
+            sd = sd(abs(cohens.d)),
+            se = sd/sqrt(n()),
+            n = n()) 
+kable(plasticity.cohens.d.summary, caption = &quot;Mean absolute Cohen&#39;s d for volatiles and other traits&quot;, digits=2)</code></pre>
+<table>
+<caption>Mean absolute Cohen’s d for volatiles and other
+traits</caption>
+<thead>
+<tr class="header">
+<th align="left">newenv</th>
+<th align="left">traitgroup</th>
+<th align="right">absolute_cohen</th>
+<th align="right">sd</th>
+<th align="right">se</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Addition</td>
+<td align="left">other</td>
+<td align="right">0.27</td>
+<td align="right">0.16</td>
+<td align="right">0.04</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">Addition</td>
+<td align="left">volatile</td>
+<td align="right">0.12</td>
+<td align="right">0.09</td>
+<td align="right">0.02</td>
+<td align="right">36</td>
+</tr>
+<tr class="odd">
+<td align="left">Early</td>
+<td align="left">other</td>
+<td align="right">0.12</td>
+<td align="right">0.16</td>
+<td align="right">0.04</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">Early</td>
+<td align="left">volatile</td>
+<td align="right">0.13</td>
+<td align="right">0.13</td>
+<td align="right">0.02</td>
+<td align="right">36</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduction</td>
+<td align="left">other</td>
+<td align="right">0.20</td>
+<td align="right">0.20</td>
+<td align="right">0.04</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="left">Reduction</td>
+<td align="left">volatile</td>
+<td align="right">0.19</td>
+<td align="right">0.17</td>
+<td align="right">0.03</td>
+<td align="right">36</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>plasticity.cohens.d.summary %&gt;% select(-sd, -n) %&gt;% 
+  pivot_wider(names_from=traitgroup, values_from = c(absolute_cohen, se)) %&gt;% 
+  mutate(z = (absolute_cohen_other - absolute_cohen_volatile)/sqrt(se_other^2 + se_volatile^2),
+         p.value = pnorm(abs(z), mean = 0, sd = 1, lower.tail = FALSE)*2, .keep = &quot;unused&quot;) %&gt;% #two-tailed z test 
+  kable(caption = &quot;Z test of difference in absolute Cohen&#39;s d for volatiles and other traits&quot;)</code></pre>
+<table>
+<caption>Z test of difference in absolute Cohen’s d for volatiles and
+other traits</caption>
+<thead>
+<tr class="header">
+<th align="left">newenv</th>
+<th align="right">z</th>
+<th align="right">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Addition</td>
+<td align="right">3.8152</td>
+<td align="right">0.0001</td>
+</tr>
+<tr class="even">
+<td align="left">Early</td>
+<td align="right">-0.2903</td>
+<td align="right">0.7716</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduction</td>
+<td align="right">0.2988</td>
+<td align="right">0.7651</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>adaptive.plasticity.data %&gt;%
+  mutate(adaptive = sign(B) == sign(estimate)) %&gt;% filter(newenv !=&quot;R_A&quot;) %&gt;% 
+  group_by(newenv, fitnesstrait) %&gt;% summarize(adaptive=sum(adaptive), n=n(), .groups=&quot;drop&quot;) %&gt;% 
+  mutate(prop = adaptive/n,
+         p.value=map2_dbl(adaptive, n, ~ prop.test(.x, .y)$p.value),
+         fitnesstrait = fitnessnames[fitnesstrait]) %&gt;% 
+  kable(caption=paste(&quot;Proportion of&quot;, ncol(vols.good.top), &quot;volatiles and&quot;, length(floraltraits.pca), 
+                      &quot;other traits whose plasticity is adaptive across 3 yr&quot;), digits=2)</code></pre>
+<table>
+<caption>Proportion of 12 volatiles and 7 other traits whose plasticity
+is adaptive across 3 yr</caption>
+<thead>
+<tr class="header">
+<th align="left">newenv</th>
+<th align="left">fitnesstrait</th>
+<th align="right">adaptive</th>
+<th align="right">n</th>
+<th align="right">prop</th>
+<th align="right">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Addition</td>
+<td align="left">Prop. uneaten fruits</td>
+<td align="right">21</td>
+<td align="right">56</td>
+<td align="right">0.38</td>
+<td align="right">0.08</td>
+</tr>
+<tr class="even">
+<td align="left">Addition</td>
+<td align="left">Total seeds</td>
+<td align="right">28</td>
+<td align="right">56</td>
+<td align="right">0.50</td>
+<td align="right">1.00</td>
+</tr>
+<tr class="odd">
+<td align="left">Addition</td>
+<td align="left">Seeds initiated per flower</td>
+<td align="right">25</td>
+<td align="right">56</td>
+<td align="right">0.45</td>
+<td align="right">0.50</td>
+</tr>
+<tr class="even">
+<td align="left">Early</td>
+<td align="left">Prop. uneaten fruits</td>
+<td align="right">27</td>
+<td align="right">56</td>
+<td align="right">0.48</td>
+<td align="right">0.89</td>
+</tr>
+<tr class="odd">
+<td align="left">Early</td>
+<td align="left">Total seeds</td>
+<td align="right">22</td>
+<td align="right">56</td>
+<td align="right">0.39</td>
+<td align="right">0.14</td>
+</tr>
+<tr class="even">
+<td align="left">Early</td>
+<td align="left">Seeds initiated per flower</td>
+<td align="right">24</td>
+<td align="right">56</td>
+<td align="right">0.43</td>
+<td align="right">0.35</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduction</td>
+<td align="left">Prop. uneaten fruits</td>
+<td align="right">31</td>
+<td align="right">56</td>
+<td align="right">0.55</td>
+<td align="right">0.50</td>
+</tr>
+<tr class="even">
+<td align="left">Reduction</td>
+<td align="left">Total seeds</td>
+<td align="right">32</td>
+<td align="right">56</td>
+<td align="right">0.57</td>
+<td align="right">0.35</td>
+</tr>
+<tr class="odd">
+<td align="left">Reduction</td>
+<td align="left">Seeds initiated per flower</td>
+<td align="right">26</td>
+<td align="right">56</td>
+<td align="right">0.46</td>
+<td align="right">0.69</td>
+</tr>
+</tbody>
+</table>
+<div id="plasticity-to-snowmelt-vs.-precipitation"
+class="section level2">
+<h2>Plasticity to snowmelt vs. precipitation</h2>
+<pre class="r"><code>compare.plasticity &lt;- full_join(
+  adaptive.plasticity.data %&gt;% filter(newenv==&quot;R_A&quot;) %&gt;% 
+    select(year, name, class, mean.floral, estimate, std.error) %&gt;%
+    rename(R_A=estimate, R_A.SE=std.error),
+  adaptive.plasticity.data %&gt;% filter(newenv==&quot;Early&quot;) %&gt;% 
+    select(year, name, class, mean.floral, estimate, std.error) %&gt;%
+    rename(E_N=estimate, E_N.SE=std.error) %&gt;% distinct()) #3 rows each, one for each fitness trait
+
+ggplot(compare.plasticity, aes(x=log2(R_A+1), xmin=log2(R_A+1-R_A.SE), xmax=log2(R_A+1+R_A.SE), 
+                               y=log2(E_N+1), ymin=log2(E_N+1-E_N.SE), ymax=log2(E_N+1+E_N.SE), color=class)) + 
+  facet_wrap(vars(year), ncol=1)+
+  geom_vline(xintercept=0) + geom_hline(yintercept=0) +
+  annotate(&quot;rect&quot;, xmin = 0, xmax = Inf, ymin = 0, ymax = -Inf, fill= &quot;black&quot;, alpha=0.1) + 
+  annotate(&quot;rect&quot;, xmin = 0, xmax = -Inf, ymin = Inf, ymax = 0, fill= &quot;black&quot;, alpha=0.1) +
+  geom_errorbar() + geom_errorbarh() + geom_point(aes(size=replace_na(mean.floral, 10))) + 
+  scale_size_area(&quot;Mean emissions\n(ng/hr/flower)&quot;, max_size=3) +
+  scale_color_manual(&quot;Compound class&quot;, values=c(class_pal, &quot;Other trait&quot;=&quot;black&quot;), 
+                     guide=guide_legend(override.aes = list(size=5))) + theme_bw() +
+  labs(x=&quot;Plasticity to reduced vs. additional precipitation\n(log2 fold change)&quot;, #NaNs from negative xmins
+       y=&quot;Plasticity to early snowmelt (log2 fold change)&quot;)</code></pre>
+<p><img src="images/snow_v_water-1.svg" width="432" /></p>
+<pre class="r"><code>compare.plasticity %&gt;% group_by(year) %&gt;%  
+  summarize(snow_water_cor = cor(log2(R_A+1), log2(E_N+1), use=&quot;complete&quot;),
+            snow_water_p = cor.test(log2(R_A+1), log2(E_N+1), use=&quot;complete&quot;)$p.value, n=n()) %&gt;% 
+  kable(caption=&quot;correlation between plasticity to water and snowmelt in each year&quot;)</code></pre>
+<table>
+<caption>correlation between plasticity to water and snowmelt in each
+year</caption>
+<thead>
+<tr class="header">
+<th align="left">year</th>
+<th align="right">snow_water_cor</th>
+<th align="right">snow_water_p</th>
+<th align="right">n</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="right">-0.2665</td>
+<td align="right">0.2850</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="right">-0.1606</td>
+<td align="right">0.5112</td>
+<td align="right">19</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="right">0.7297</td>
+<td align="right">0.0004</td>
+<td align="right">19</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>### Change in selection gradient vs. plasticity
+diffbeta &lt;- vols.beta.water %&gt;% rename(name=trait) %&gt;% 
+  pivot_wider(names_from=water, values_from=c(B,SE)) %&gt;% 
+  mutate(B_A_R = B_Addition - B_Reduction)
+
+#TODO get this working again with compare.plasticity
+plasticity.water %&gt;% left_join(diffbeta) %&gt;% 
+  ggplot(aes(x=A_R, y=B_A_R, color=class)) + facet_wrap(vars(year), ncol=1)+
+  geom_vline(xintercept=0)+geom_hline(yintercept=0) + geom_text(aes(label=name)) + 
+  scale_x_continuous(labels=scales::percent, limits=c(NA,NA)) + theme_bw()  + theme(legend.position = &quot;top&quot;) +
+  labs(x=&quot;Emissions change in precipitation addition vs. reduction&quot;, y=&quot;Change in selection gradient (beta) in precipitation addition vs. reduction&quot;)</code></pre>
+</div>
+</div>
+<div id="combined-analysis-of-volatiles-and-other-floral-traits"
+class="section level1">
+<h1>Combined analysis of volatiles and other floral traits</h1>
+<div id="overlap-of-datasets" class="section level2">
+<h2>Overlap of datasets</h2>
+<pre class="r"><code>samples_per_plant &lt;- volsmeta %&gt;% count(year, plantid, name=&quot;scent&quot;) %&gt;% as_tibble() %&gt;% 
+  full_join(mnps.plantyr.traits %&gt;% drop_na(corolla_length) %&gt;% count(year,plantid, name=&quot;morph&quot;)) %&gt;% 
+  full_join(mnps.plantyr.traits %&gt;% drop_na(nectar_24_h_ul) %&gt;% count(year,plantid, name=&quot;nectar&quot;)) %&gt;% 
+  full_join(mnps.plantyr.traits %&gt;% drop_na(height_cm) %&gt;% count(year,plantid, name=&quot;height&quot;)) %&gt;% 
+  full_join(mnps.plantyr.traits %&gt;% drop_na(seeds_est) %&gt;% count(year,plantid, name=&quot;seeds&quot;)) %&gt;% 
+  drop_na(seeds)
+
+traits.m &lt;- c(&quot;corolla_length&quot;, &quot;corolla_width&quot;, &quot;style_length&quot;) #exclude sepal_width (no 2018), anther min/max
+traits.n &lt;- c(&quot;nectar_24_h_ul&quot;, &quot;nectar_conc&quot;)
+overlaps &lt;- c(&quot;v&quot;,&quot;vm&quot;,&quot;vn&quot;,&quot;vmn&quot;,&quot;mn&quot;,&quot;n&quot;,&quot;m&quot;)
+# drop plants with missing data for combinations of measurements
+combos &lt;- list(v=vols.good.top, 
+               vm=vols.traits %&gt;% select(all_of(c(ipogood.top, traits.m, &quot;height_cm&quot;))) %&gt;% drop_na(), 
+               vn=vols.traits %&gt;% select(all_of(c(ipogood.top, traits.n, &quot;height_cm&quot;))) %&gt;% drop_na(), 
+               vmn=vols.traits %&gt;% select(all_of(c(ipogood.top, traits.m, traits.n, &quot;height_cm&quot;))) %&gt;% drop_na(),
+               mn=mnps.plantyr.traits %&gt;% select(all_of(c(traits.m, traits.n, &quot;height_cm&quot;))) %&gt;% drop_na(),
+               n=mnps.plantyr.traits %&gt;% select(all_of(c(traits.n, &quot;height_cm&quot;))) %&gt;% drop_na(),
+               m=mnps.plantyr.traits %&gt;% select(all_of(c(traits.m, &quot;height_cm&quot;))) %&gt;% drop_na())
+
+all.traits.combos &lt;- full_join(bind_cols(volsmeta.avg, vols.good.avg), 
+                               left_join(mnps.plantyr.traits, treatments)) %&gt;% 
+  mutate(v =   vctrs::vec_detect_complete(.[,colnames(combos$v)]),
+         vm =  vctrs::vec_detect_complete(.[,colnames(combos$vm)]),
+         vn =  vctrs::vec_detect_complete(.[,colnames(combos$vn)]),
+         vmn = vctrs::vec_detect_complete(.[,colnames(combos$vmn)]),
+         mn =  vctrs::vec_detect_complete(.[,colnames(combos$mn)]),
+         n =  vctrs::vec_detect_complete(.[,colnames(combos$n)]),
+         m =  vctrs::vec_detect_complete(.[,colnames(combos$m)]))
+
+all.traits.combos %&gt;% group_by(year, water, snow) %&gt;% 
+  summarize(across(all_of(names(combos)), sum)) %&gt;% 
+  select(Year=year, Precipitation=water, Snowmelt=snow, Volatiles=v, Morphology=m, Nectar=n, `All Traits`=vmn) %&gt;% 
+  kable(caption=&quot;plants with each set of measurements&quot;)</code></pre>
+<table>
+<caption>plants with each set of measurements</caption>
+<colgroup>
+<col width="7%" />
+<col width="20%" />
+<col width="13%" />
+<col width="14%" />
+<col width="16%" />
+<col width="10%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Year</th>
+<th align="left">Precipitation</th>
+<th align="left">Snowmelt</th>
+<th align="right">Volatiles</th>
+<th align="right">Morphology</th>
+<th align="right">Nectar</th>
+<th align="right">All Traits</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="left">Addition</td>
+<td align="left">Early</td>
+<td align="right">21</td>
+<td align="right">20</td>
+<td align="right">17</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">2018</td>
+<td align="left">Addition</td>
+<td align="left">Normal</td>
+<td align="right">19</td>
+<td align="right">19</td>
+<td align="right">17</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="left">Control</td>
+<td align="left">Early</td>
+<td align="right">21</td>
+<td align="right">32</td>
+<td align="right">19</td>
+<td align="right">9</td>
+</tr>
+<tr class="even">
+<td align="left">2018</td>
+<td align="left">Control</td>
+<td align="left">Normal</td>
+<td align="right">26</td>
+<td align="right">37</td>
+<td align="right">19</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">2018</td>
+<td align="left">Reduction</td>
+<td align="left">Early</td>
+<td align="right">15</td>
+<td align="right">26</td>
+<td align="right">11</td>
+<td align="right">6</td>
+</tr>
+<tr class="even">
+<td align="left">2018</td>
+<td align="left">Reduction</td>
+<td align="left">Normal</td>
+<td align="right">10</td>
+<td align="right">14</td>
+<td align="right">9</td>
+<td align="right">7</td>
+</tr>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="left">Addition</td>
+<td align="left">Early</td>
+<td align="right">14</td>
+<td align="right">9</td>
+<td align="right">11</td>
+<td align="right">7</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="left">Addition</td>
+<td align="left">Normal</td>
+<td align="right">37</td>
+<td align="right">35</td>
+<td align="right">36</td>
+<td align="right">28</td>
+</tr>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="left">Control</td>
+<td align="left">Early</td>
+<td align="right">23</td>
+<td align="right">33</td>
+<td align="right">34</td>
+<td align="right">17</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="left">Control</td>
+<td align="left">Normal</td>
+<td align="right">22</td>
+<td align="right">28</td>
+<td align="right">33</td>
+<td align="right">16</td>
+</tr>
+<tr class="odd">
+<td align="left">2019</td>
+<td align="left">Reduction</td>
+<td align="left">Early</td>
+<td align="right">16</td>
+<td align="right">14</td>
+<td align="right">14</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="left">2019</td>
+<td align="left">Reduction</td>
+<td align="left">Normal</td>
+<td align="right">19</td>
+<td align="right">23</td>
+<td align="right">23</td>
+<td align="right">17</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">Addition</td>
+<td align="left">Early</td>
+<td align="right">22</td>
+<td align="right">21</td>
+<td align="right">19</td>
+<td align="right">13</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">Addition</td>
+<td align="left">Normal</td>
+<td align="right">18</td>
+<td align="right">27</td>
+<td align="right">26</td>
+<td align="right">11</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">Control</td>
+<td align="left">Early</td>
+<td align="right">31</td>
+<td align="right">38</td>
+<td align="right">34</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">Control</td>
+<td align="left">Normal</td>
+<td align="right">30</td>
+<td align="right">30</td>
+<td align="right">27</td>
+<td align="right">12</td>
+</tr>
+<tr class="odd">
+<td align="left">2020</td>
+<td align="left">Reduction</td>
+<td align="left">Early</td>
+<td align="right">16</td>
+<td align="right">14</td>
+<td align="right">15</td>
+<td align="right">8</td>
+</tr>
+<tr class="even">
+<td align="left">2020</td>
+<td align="left">Reduction</td>
+<td align="left">Normal</td>
+<td align="right">14</td>
+<td align="right">13</td>
+<td align="right">13</td>
+<td align="right">8</td>
+</tr>
+</tbody>
+</table>
+<pre class="r"><code>meta.pca &lt;- #treatments used in selection_pca function 
+  volsmeta.avg[!is.na(rowSums(vols.traits[,colnames(combos$vmn)])),] #match rows in vmn</code></pre>
+</div>
+<div id="correlations" class="section level2">
+<h2>Correlations</h2>
+<pre class="r"><code>corr.annot &lt;- tibble(name=colnames(combos$vmn)) %&gt;% left_join(ipochemsf) %&gt;% column_to_rownames(&quot;name&quot;) %&gt;% 
+  mutate(class = fct_na_value_to_level(class, &quot;Other trait&quot;)) %&gt;% select(Class=class)
+corr.labs &lt;- rownames(corr.annot) %&gt;% greekify() %&gt;% recode(!!!traitnames)
+pheatmap(cor(combos$vmn, method=&quot;pearson&quot;), 
+         scale=&quot;none&quot;, clustering_method = &quot;mcquitty&quot;,
+         color=colorRampPalette(c(&quot;blue&quot;,&quot;white&quot;,&quot;red&quot;))(200), breaks=seq(-1,1,by=0.01),
+         annotation_col=corr.annot, annotation_row=corr.annot, 
+         annotation_colors = list(Class=c(class_pal, &quot;Other trait&quot;=&quot;black&quot;)),
+         labels_row=corr.labs, labels_col=corr.labs)</code></pre>
+<p><img src="images/vmnt_corr-1.svg" width="672" /></p>
+<pre class="r"><code>cor(combos$vmn, method=&quot;pearson&quot;)[ipogood.top,c(traits.m, traits.n, &quot;height_cm&quot;)] %&gt;% abs() %&gt;%  as.vector() %&gt;% mean(na.rm=T) %&gt;%  round(2) %&gt;% paste(&quot;Mean correlation among other floral traits: &quot;, .) %&gt;% print()</code></pre>
+<pre><code>[1] &quot;Mean correlation among other floral traits:  0.07&quot;</code></pre>
+<pre class="r"><code>cor(combos$vmn, method=&quot;pearson&quot;)[ipogood.top, ipogood.top] %&gt;% as.vector() %&gt;% na_if(1) %&gt;% abs() %&gt;% mean(na.rm=T) %&gt;% round(2) %&gt;% paste(&quot;Mean correlation among volatiles: &quot;, .) %&gt;% print()</code></pre>
+<pre><code>[1] &quot;Mean correlation among volatiles:  0.32&quot;</code></pre>
+<pre class="r"><code>cor(combos$vmn, method=&quot;pearson&quot;)[c(traits.m, traits.n, &quot;height_cm&quot;), c(traits.m, traits.n, &quot;height_cm&quot;)] %&gt;% as.vector() %&gt;% na_if(1) %&gt;% abs() %&gt;% mean(na.rm=T) %&gt;% round(2) %&gt;% paste(&quot;Mean correlation between volatiles and other floral traits: &quot;, .) %&gt;% print()</code></pre>
+<pre><code>[1] &quot;Mean correlation between volatiles and other floral traits:  0.27&quot;</code></pre>
+</div>
+<div id="elastic-net-1" class="section level2">
+<h2>Elastic net</h2>
+<pre class="r"><code>trait_en_reg_combined &lt;- function(fitnesstrait, regtraits, en_alpha) {
+  std.traits &lt;- bind_cols(combos$vmn, meta.pca) %&gt;% 
+    mutate(across(all_of(regtraits), ~ (.x-mean(.x))/sd(.x))) %&gt;%  #center and scale traits
+    select(-any_of(fitnesstrait)) %&gt;% 
+    left_join(mnps.plantyr.traits %&gt;% select(year, plotid, plantid, all_of(fitnesstrait)), by=c(&quot;year&quot;, &quot;plotid&quot;, &quot;plantid&quot;)) %&gt;% 
+    select(all_of(fitnesstrait), any_of(names(treatments)), all_of(regtraits)) %&gt;% 
+    rename(&quot;fitness&quot; = all_of(fitnesstrait)) %&gt;% 
+    mutate(relfitness = scale(fitness/mean(fitness, na.rm=T), center=T, scale=F), .keep=&quot;unused&quot;) %&gt;% #relative fitness across years
+    drop_na(relfitness) %&gt;% 
+    select(where(~sum(is.na(.))==0))
+  
+  Y = std.traits %&gt;% select(relfitness) %&gt;% as.matrix()
+  X = std.traits %&gt;% select(all_of(c(regtraits, &quot;precip_est_mm&quot;, &quot;sun_date&quot;))) %&gt;% as.matrix()
+  
+  crossvalidate &lt;- cv.glmnet(x=X, y=Y, alpha = en_alpha)
+  #plot(crossvalidate, main=paste(fitnesstrait, &quot;alpha=&quot;, en_alpha))
+  best_lambda &lt;- crossvalidate$lambda.min
+  
+  en_model &lt;- glmnet(x=X, y=Y, alpha = en_alpha, lambda = best_lambda)
+  selection.on.traits &lt;- en_model %&gt;% tidy() %&gt;% rename(B=estimate, trait=term)
+  
+  if(en_alpha == 1) {  #note fixedLassoInf only works for lasso, not ridge or elastic net!
+    #the discussion in the selectiveInference help about how to scale lambda is confusing.
+    #running with coef(s = lambda/nrow(Y)) and then fixedlassoInf(lambda = best_lamda) works
+    #but if example lambda=0.8 is unscaled by n, then it should be
+    #coef(s = lambda) and then fixedlassoInf(lambda = best_lamda* nrow(Y)), which gives a polyhedral constraint error
+    #See https://stackoverflow.com/questions/68147109/r-how-to-translate-lasso-lambda-values-from-the-cv-glmnet-function-into-the-s
+
+    coefs &lt;- glmnet::coef.glmnet(en_model, x=X, y=Y, s=best_lambda, exact=TRUE, alpha=en_alpha)[-1]
+
+    si &lt;- selectiveInference::fixedLassoInf(x=X, y=Y, beta=coefs, lambda=best_lambda*nrow(Y)) #multiply by sample size to scale
+    selection.on.traits &lt;- selection.on.traits %&gt;%
+      left_join(data.frame(trait = names(si$vars), p.value = si$pv, 
+                           partial = si$coef0, conf_low = si$ci[,1], conf_high = si$ci[,2]), by=&quot;trait&quot;)
+  }
+  selection.on.traits
+}
+
+enregs.combined &lt;- expand_grid(fitnesstrait=fitnesstraits, en_alpha = seq(0, 1, by=0.25),
+                               regtraits = list(c(ipogood.top, floraltraits.pca[-4]))) %&gt;% 
+  mutate(betas = pmap(., trait_en_reg_combined)) %&gt;% select(-regtraits) %&gt;% 
+  unnest(betas) %&gt;% filter(!trait %in% c(&quot;(Intercept)&quot;, &quot;precip_est_mm&quot;, &quot;sun_date&quot;))</code></pre>
+<pre class="r"><code>term_labels &lt;- c(trait=&quot;Selection on trait (\U03B2)&quot;,
+                 `trait:precip_est_mm`=&quot;Selection x summer precipitation (\U03B2 / mm)&quot;,
+                 `trait:sun_date`=&quot;Selection x snowmelt date (\U03B2 / day)&quot;,
+                 PCA=&quot;Direct selection on trait (\U03B2)&quot;,
+                 en = &quot;Elastic net selection (\U03B2)&quot;)
+
+mod.selection.tests.drop %&gt;% 
+  complete(response, trait, term) %&gt;% # make dodging consistent 
+  #add similar PCA model (no interactions between trait and environment though)
+  bind_rows(bind_rows(separate = bind_rows(enregs, enregs.vol),
+                      combined = enregs.combined, .id=&quot;analysis&quot;) %&gt;% 
+               mutate(term=&quot;en&quot;) %&gt;% filter(en_alpha==0.5) %&gt;% 
+              rename(estimate=B, response=fitnesstrait)) %&gt;% 
+  filter(trait %in% c(ipogood.top, floraltraits)) %&gt;% 
+  mutate(trait = trait %&gt;% greekify() %&gt;% recode(!!!traitnames) %&gt;% 
+           factor(levels = rev(c(traitnames, greekify(ipogood.top))))) %&gt;% 
+  ggplot(aes(x=estimate,y=trait, color=response, 
+             shape=if_else(!is.na(analysis), analysis, as.character(p.value &lt; 0.05)), 
+             xmin=estimate-std.error, xmax=estimate+std.error)) + 
+  facet_grid(cols=vars(term), labeller = as_labeller(term_labels), scales=&quot;free_x&quot;) + 
+  geom_vline(xintercept=0)+ 
+  geom_path(aes(group=paste(response, trait)), 
+            position=position_dodge2(width=0.6, reverse=T, preserve = &quot;single&quot;))+
+  geom_pointrange(position = position_dodge2(width=0.6, reverse=T, preserve = &quot;single&quot;))+
+  scale_color_brewer(&quot;Fitness measure&quot;, palette = &quot;Dark2&quot;, labels = fitnessnames)+
+  scale_shape_manual(values=c(`FALSE`=1,`TRUE`=19, separate=19, combined=18), 
+                     na.value=19, guide=&quot;none&quot;)+ 
+  scale_x_continuous(expand = expansion(mult=c(0.02,0.02)))+
+  theme_bw() + theme(axis.title=element_blank(), legend.position = &quot;top&quot;,
+                     panel.grid.major.x = element_blank(), panel.grid.minor.x = element_blank())</code></pre>
+<p><img src="images/elasticnet_abs-1.svg" width="1056" /></p>
+<div id="by-treatment" class="section level3">
+<h3>By treatment</h3>
+<pre class="r"><code>calculate_all_gradients_nosepal_en_combined &lt;- function(trts) { 
+  mutate(trts, year=list(names(year_pal)),
+         data = list(bind_cols(combos$vmn, meta.pca)), 
+         regtraits = list(c(ipogood.top, floraltraits.pca[-4])),
+         en_alpha=0.5) %&gt;% 
+    mutate(betas = pmap(., trait_en_reg)) %&gt;% select(-regtraits, -data) %&gt;% unnest(betas)
+}
+en.beta.water.allyrs.combined &lt;- expand_grid(fitnesstrait=fitnesstraits, water=names(water_pal)) %&gt;%
+  calculate_all_gradients_nosepal_en_combined()
+en.beta.snow.allyrs.combined &lt;- expand_grid(fitnesstrait=fitnesstraits, snow=names(snow_pal)) %&gt;%
+  calculate_all_gradients_nosepal_en_combined()
+
+plot_beta_en_separate_combined &lt;- function(betas, colorby) {
+  betas %&gt;% left_join(ipochemsf, by=c(&quot;trait&quot;=&quot;name&quot;)) %&gt;% 
+    mutate(trait = recode(trait, !!!traitnames) %&gt;%  greekify() %&gt;% 
+             fct_reorder(replace_na(mean.floral,1000))) %&gt;%  #order graph by mean emissions
+    filter(trait != &quot;(Intercept)&quot;) %&gt;% 
+    rename(treatment=!!colorby) %&gt;% 
+    ggplot(aes(y=trait, x = B, shape=analysis, group=paste(fitnesstrait, trait, treatment), color=treatment)) + 
+    facet_wrap(vars(fitnesstrait), nrow=1, labeller=as_labeller(fitnessnames))+
+    geom_vline(xintercept=0)+ 
+    geom_path(position=position_dodge2(width=0.6, reverse=T, preserve = &quot;single&quot;))+
+    geom_point(position=position_dodge2(width=0.6, reverse=T, preserve = &quot;single&quot;)) + 
+    labs(x = &quot;Selection gradient (\U03B2)&quot;, y = &quot;Trait&quot;,
+         color=list(year=&quot;Year&quot;, water=&quot;Precipitation&quot;, snow=&quot;Snowmelt&quot;, 
+                    water_snow = &quot;Precipitation and snowmelt&quot;)[[colorby]]) +
+    scale_shape_manual(values=c(separate=19, combined=18), guide=&quot;none&quot;)+ 
+    scale_color_manual(values=list(year=year_pal, water=water_pal, snow=snow_pal)[[colorby]]) +
+    theme_bw() + theme(legend.position = &quot;top&quot;)
+}
+bind_rows(separate=en.beta.water.allyrs, 
+          combined=en.beta.water.allyrs.combined, .id=&quot;analysis&quot;) %&gt;% 
+  plot_beta_en_separate_combined(colorby=&quot;water&quot;)</code></pre>
+<p><img src="images/elasticnet_separate_combined_treatments-1.svg" width="720" /></p>
+<pre class="r"><code>bind_rows(separate=en.beta.snow.allyrs, 
+          combined=en.beta.snow.allyrs.combined, .id=&quot;analysis&quot;) %&gt;% 
+  plot_beta_en_separate_combined(colorby=&quot;snow&quot;)</code></pre>
+<p><img src="images/elasticnet_separate_combined_treatments-2.svg" width="720" /></p>
+</div>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
